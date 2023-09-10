@@ -146,6 +146,14 @@ int GameOfLife::getInput()
                 {
                     switch(e.key.keysym.sym)
                     {
+                        case SDLK_p:
+                            paused = !paused;
+                            while(paused)
+                            {
+                                getInput();
+                            }
+                                
+                            break;
                         case SDLK_RIGHTBRACKET:
                             speed-=20;
                             if(speed<0) speed=0;
@@ -176,7 +184,7 @@ int GameOfLife::getInput()
                             view.h = height;
                             view.x = 0;
                             view.y = 0;
-                            SDL_Log("%d, %d, %d, %d",view.w,view.h,view.x,view.y);
+                            draw();
                             break;
                         case SDLK_2:
                             SDL_Log("Zoom Level 2");
@@ -184,7 +192,7 @@ int GameOfLife::getInput()
                             view.h = 153;
                             view.x = (width-(view.w))/2;
                             view.y = (height-(view.h))/2;
-                            SDL_Log("%d, %d, %d, %d",view.w,view.h,view.x,view.y);
+                            draw();
                             break;
                         case SDLK_3:
                             SDL_Log("Zoom Level 3");
@@ -192,7 +200,7 @@ int GameOfLife::getInput()
                             view.h = 81;
                             view.x = (width-(view.w))/2;
                             view.y = (height-(view.h))/2;
-                            SDL_Log("%d, %d, %d, %d",view.w,view.h,view.x,view.y);
+                            draw();
                             break;
                     }
                 }

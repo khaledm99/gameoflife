@@ -11,6 +11,7 @@ class GameOfLife {
         int width;
         int wheight = 720;
         int wwidth =1280;
+        bool paused = false;
 
         SDL_Event e;
         SDL_Window* window = nullptr;
