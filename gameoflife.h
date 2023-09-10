@@ -9,6 +9,8 @@ class GameOfLife {
     private:
         int height;
         int width;
+        int wheight;
+        int wwidth;
 
         SDL_Event e;
         SDL_Window* window = nullptr;
