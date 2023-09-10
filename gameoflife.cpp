@@ -154,6 +154,13 @@ int GameOfLife::getInput()
                             }
                                 
                             break;
+                        case SDLK_n:
+                            if(paused)
+                            {
+                                next();
+                                draw();
+                            }
+                            break;
                         case SDLK_RIGHTBRACKET:
                             speed-=20;
                             if(speed<0) speed=0;
