@@ -15,10 +15,10 @@ int mod_floor(int a, int n) {
 
 int GameOfLife::init()
 {
-    height = 90;
-    width = 160;
-    wheight = 720;
-    wwidth = 1280;
+    //height = 90;
+    //width = 160;
+    height = 243;
+    width = 432;
 
     SDL_Init(SDL_INIT_VIDEO);
 
@@ -28,11 +28,19 @@ int GameOfLife::init()
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height);
 
+    win.x = win.y = 0;
+    win.w = wwidth;
+    win.h = wheight;
+
+    view.x = view.y = 0;
+    view.w = width;
+    view.h = height;
+
     srand(time(NULL));
 
     world = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
     temp = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
-
+    
     speed = 100;
 
     for(int i=0; i<height; i++)
@@ -57,11 +65,8 @@ int GameOfLife::clear()
     SDL_RenderClear(renderer);
     SDL_SetRenderTarget(renderer, NULL);
 
-    SDL_Rect win;
-    win.x = win.y = 0;
-    win.w = 1280;
-    win.h = 720;
-    SDL_RenderCopy(renderer,texture,NULL,&win);
+    
+    SDL_RenderCopy(renderer,texture,&view,&win);
     return 0;
 }
 
@@ -80,13 +85,11 @@ int GameOfLife::draw()
         }
     }
 
+    SDL_SetRenderDrawColor(renderer,0,255,0,255);
+    SDL_RenderDrawPoint(renderer,width/2,height/2);
     SDL_SetRenderTarget(renderer, NULL);
 
-    SDL_Rect win;
-    win.x = win.y = 0;
-    win.w = 1280;
-    win.h = 720;
-    SDL_RenderCopy(renderer,texture,NULL,&win);
+    SDL_RenderCopy(renderer,texture,&view,&win);
     SDL_RenderPresent(renderer);
     return 0;
 }
@@ -167,7 +170,30 @@ int GameOfLife::getInput()
                             SDL_Log("Program quit(q)...");
                             exit(0);
                             break;
-
+                        case SDLK_1:
+                            SDL_Log("Zoom Level 1");
+                            view.w = width;
+                            view.h = height;
+                            view.x = 0;
+                            view.y = 0;
+                            SDL_Log("%d, %d, %d, %d",view.w,view.h,view.x,view.y);
+                            break;
+                        case SDLK_2:
+                            SDL_Log("Zoom Level 2");
+                            view.w = 272;
+                            view.h = 153;
+                            view.x = (width-(view.w))/2;
+                            view.y = (height-(view.h))/2;
+                            SDL_Log("%d, %d, %d, %d",view.w,view.h,view.x,view.y);
+                            break;
+                        case SDLK_3:
+                            SDL_Log("Zoom Level 3");
+                            view.w = 144;
+                            view.h = 81;
+                            view.x = (width-(view.w))/2;
+                            view.y = (height-(view.h))/2;
+                            SDL_Log("%d, %d, %d, %d",view.w,view.h,view.x,view.y);
+                            break;
                     }
                 }
                 break;

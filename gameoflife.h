@@ -9,13 +9,15 @@ class GameOfLife {
     private:
         int height;
         int width;
-        int wheight;
-        int wwidth;
+        int wheight = 720;
+        int wwidth =1280;
 
         SDL_Event e;
         SDL_Window* window = nullptr;
         SDL_Renderer* renderer = nullptr;
         SDL_Texture* texture = nullptr;
+        SDL_Rect win;
+        SDL_Rect view;
 
         
         std::vector<std::vector<int>> world;
