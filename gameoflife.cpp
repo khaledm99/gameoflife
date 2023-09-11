@@ -12,6 +12,9 @@ int mod_floor(int a, int n) {
     else return a;
     
 }
+int find_nearest(int a, int b) {
+    return (a + (b/2)) / b;
+}
 
 int GameOfLife::init()
 {
@@ -43,13 +46,13 @@ int GameOfLife::init()
     
     speed = 100;
 
-    for(int i=0; i<height; i++)
-    {
-        for(int j=0; j<width; j++)
-        {
-            if(rand() % 100 + 1 > 50) world[i][j] = 1;
-        }
-    }
+    //for(int i=0; i<height; i++)
+    //{
+     //   for(int j=0; j<width; j++)
+      //  {
+       //     if(rand() % 100 + 1 > 50) world[i][j] = 1;
+        //}
+   // }
     //world[10][10]=1;
     //world[8][11]=1;
     //world[10][11]=1;
@@ -65,7 +68,6 @@ int GameOfLife::clear()
     SDL_RenderClear(renderer);
     SDL_SetRenderTarget(renderer, NULL);
 
-    
     SDL_RenderCopy(renderer,texture,&view,&win);
     return 0;
 }
@@ -86,10 +88,14 @@ int GameOfLife::draw()
     }
 
     SDL_SetRenderDrawColor(renderer,0,255,0,255);
+    int x, y;
     SDL_RenderDrawPoint(renderer,width/2,height/2);
     SDL_SetRenderTarget(renderer, NULL);
 
     SDL_RenderCopy(renderer,texture,&view,&win);
+    SDL_GetMouseState(&x,&y);
+    SDL_SetRenderDrawColor(renderer,100,0,0,255);
+    SDL_RenderDrawPoint(renderer,x,y);
     SDL_RenderPresent(renderer);
     return 0;
 }
@@ -142,6 +148,18 @@ int GameOfLife::getInput()
                 SDL_Log("Program quit...");
                 exit(0);
                 break;
+            case SDL_MOUSEBUTTONDOWN:
+                {
+                    switch(e.button.button)
+                    {
+                        case SDL_BUTTON_LEFT:
+                            //SDL_Log("left click, %d, %d, %d, %d",e.button.x,e.button.y,0,0);
+                            world[(find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y][(find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x] = 1;
+                            draw();
+                            break;
+                    }
+                }
+                break;
             case SDL_KEYDOWN:
                 {
                     switch(e.key.keysym.sym)
@@ -152,7 +170,6 @@ int GameOfLife::getInput()
                             {
                                 getInput();
                             }
-                                
                             break;
                         case SDLK_n:
                             if(paused)
