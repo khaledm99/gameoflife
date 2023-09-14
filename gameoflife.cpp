@@ -180,7 +180,7 @@ int GameOfLife::getInput()
                             if(paused)
                             {
                                 next();
-                                draw();
+                                //draw();
                             }
                             break;
                         case SDLK_RIGHTBRACKET:
@@ -198,7 +198,7 @@ int GameOfLife::getInput()
                             {
                                 for(int j=0; j<width; j++)
                                 {
-                                    if(rand() % 100 + 1 > 50) world[i][j] = 1;
+                                    if(rand() % 100 + 1 > 70) world[i][j] = 1;
                                 }
                             }
                             SDL_Log("randomized world");
