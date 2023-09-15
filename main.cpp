@@ -1,4 +1,4 @@
-#include "gameoflife.cpp"
+#include "gameoflife.h"
 
 int main()
 {
