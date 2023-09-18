@@ -1,4 +1,7 @@
 # Conway's Game Of Life
+
+![](https://github.com/khaledm99/gameoflife/blob/220ebfdeb2c77bed7233ef5d9127ae5356ae9171/Game%20of%20Life%20Demo.gif)
+
 This is an interactive gameoflife simulator. Requires SDL2.
 
 What started as a simple exercise using a simple game of life implementation to learn SDL2 for graphics,
