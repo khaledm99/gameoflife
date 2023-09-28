@@ -1,14 +1,20 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include "gameoflife.h"
-#include "display.h"
-#include "util.h"
 #include <stdlib.h>
 #include <time.h>
 
 
 
-
+int mod_floor(int a, int n) {
+    if(a<0) return n-1;
+    else if(a==n) return 0;
+    else return a;
+    
+}
+int find_nearest(int a, int b) {
+    return (a + (b/2)) / b;
+}
 
 int GameOfLife::init()
 {
@@ -17,23 +23,21 @@ int GameOfLife::init()
     height = 243;
     width = 432;
 
- //   SDL_Init(SDL_INIT_VIDEO);
+    SDL_Init(SDL_INIT_VIDEO);
 
- //   disp.window = SDL_Createdisp.window("GameOfLife",SDL_disp.winDOWPOS_UNDEFINED,SDL_disp.winDOWPOS_UNDEFINED,wwidth,wheight,0);
- //   renderer = SDL_CreateRenderer(disp.window, -1, SDL_RENDERER_TARGETTEXTURE);
+    window = SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,wwidth,wheight,0);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_TARGETTEXTURE);
 
- //   SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
- //   texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height);
+    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
+    texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height);
 
- //   disp.win.x = disp.win.y = 0;
- //   disp.win.w = wwidth;
- //   disp.win.h = wheight;
+    win.x = win.y = 0;
+    win.w = wwidth;
+    win.h = wheight;
 
- //   disp.view.x = disp.view.y = 0;
- //   disp.view.w = width;
- //   disp.view.h = height;
- 
-    disp.init(width, height);
+    view.x = view.y = 0;
+    view.w = width;
+    view.h = height;
 
     srand(time(NULL));
 
@@ -51,27 +55,47 @@ int GameOfLife::init()
     return 0;
 } 
 
-int GameOfLife::drawWorld()
+int GameOfLife::clear()
 {
-    disp.clear();
+    SDL_SetRenderTarget(renderer, texture);
+    SDL_SetRenderDrawColor(renderer,0,0,0,255);
+    SDL_RenderClear(renderer);
+    SDL_SetRenderTarget(renderer, NULL);
 
-    for(int i=0; i<world.size(); i++)
-    {
-        for(int j=0; j<world[0].size(); j++)
-        {
-            if(world[i][j]==1) disp.drawCell(j,i);
-        }
-    }
-    if(paused)
-    {
-        disp.drawMouseCursor();
-    }
-    
-    disp.present();
+    SDL_RenderCopy(renderer,texture,&view,&win);
     return 0;
 }
 
+int GameOfLife::draw()
+{
+    clear();
 
+    SDL_SetRenderTarget(renderer, texture);
+    SDL_SetRenderDrawColor(renderer,255,255,255,255);
+
+    for(int i=0; i<height; i++)
+    {
+        for(int j=0; j<width; j++)
+        {
+            if(world[i][j]==1) SDL_RenderDrawPoint(renderer,j,i);
+        }
+    }
+
+    SDL_SetRenderDrawColor(renderer,0,255,0,255);
+    SDL_RenderDrawPoint(renderer,width/2,height/2);
+    if(paused)
+    {
+        int x, y;
+        SDL_GetMouseState(&x,&y);
+        SDL_SetRenderDrawColor(renderer,200,200,200,255);
+        SDL_RenderDrawPoint(renderer, (find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
+    }
+    
+    SDL_SetRenderTarget(renderer, NULL);
+    SDL_RenderCopy(renderer,texture,&view,&win);
+    SDL_RenderPresent(renderer);
+    return 0;
+}
 
 int GameOfLife::next()
 {
@@ -110,18 +134,12 @@ int GameOfLife::next()
     }
     return 0;
 }
-
-int GameOfLife::draw()
-{
-    drawWorld();
-    return 0;
-}
         
 int GameOfLife::getInput()
 {    
-    while(SDL_PollEvent(&disp.e))
+    while(SDL_PollEvent(&e))
     {
-        switch(disp.e.type)
+        switch(e.type)
         {
             case SDL_QUIT:
                 SDL_Log("Program quit...");
@@ -129,18 +147,18 @@ int GameOfLife::getInput()
                 break;
             case SDL_MOUSEBUTTONDOWN:
                 {
-                    switch(disp.e.button.button)
+                    switch(e.button.button)
                     {
                         case SDL_BUTTON_LEFT:
                             if(paused)
                             {
-                                world[(find_nearest(disp.e.button.y,find_nearest(disp.win.h,disp.view.h)))+disp.view.y][(find_nearest(disp.e.button.x,find_nearest(disp.win.w,disp.view.w)))+disp.view.x] = 1;
+                                world[(find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y][(find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x] = 1;
                             }
                             break;
                         case SDL_BUTTON_RIGHT:
                             if(paused)
                             {
-                                world[(find_nearest(disp.e.button.y,find_nearest(disp.win.h,disp.view.h)))+disp.view.y][(find_nearest(disp.e.button.x,find_nearest(disp.win.w,disp.view.w)))+disp.view.x] = 0;
+                                world[(find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y][(find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x] = 0;
                             }
                             break;
                     }
@@ -148,13 +166,13 @@ int GameOfLife::getInput()
                 break;
             case SDL_KEYDOWN:
                 {
-                    switch(disp.e.key.keysym.sym)
+                    switch(e.key.keysym.sym)
                     {
                         case SDLK_p:
                             paused = !paused;
                             while(paused)
                             {
-                                drawWorld();
+                                draw();
                                 getInput();
                             }
                             break;
@@ -162,7 +180,7 @@ int GameOfLife::getInput()
                             if(paused)
                             {
                                 next();
-                                //drawWorld();
+                                //draw();
                             }
                             break;
                         case SDLK_RIGHTBRACKET:
@@ -191,27 +209,27 @@ int GameOfLife::getInput()
                             break;
                         case SDLK_1:
                             SDL_Log("Zoom Level 1");
-                            disp.view.w = width;
-                            disp.view.h = height;
-                            disp.view.x = 0;
-                            disp.view.y = 0;
-                            drawWorld();
+                            view.w = width;
+                            view.h = height;
+                            view.x = 0;
+                            view.y = 0;
+                            draw();
                             break;
                         case SDLK_2:
                             SDL_Log("Zoom Level 2");
-                            disp.view.w = 272;
-                            disp.view.h = 153;
-                            disp.view.x = (width-(disp.view.w))/2;
-                            disp.view.y = (height-(disp.view.h))/2;
-                            drawWorld();
+                            view.w = 272;
+                            view.h = 153;
+                            view.x = (width-(view.w))/2;
+                            view.y = (height-(view.h))/2;
+                            draw();
                             break;
                         case SDLK_3:
                             SDL_Log("Zoom Level 3");
-                            disp.view.w = 144;
-                            disp.view.h = 81;
-                            disp.view.x = (width-(disp.view.w))/2;
-                            disp.view.y = (height-(disp.view.h))/2;
-                            drawWorld();
+                            view.w = 144;
+                            view.h = 81;
+                            view.x = (width-(view.w))/2;
+                            view.y = (height-(view.h))/2;
+                            draw();
                             break;
                     }
                 }

@@ -3,24 +3,22 @@
 
 #include <SDL2/SDL.h>
 #include <vector>
-#include "display.h"
 
 class GameOfLife {
 
     private:
         int height;
         int width;
-        //int wheight = 720;
-        //int wwidth =1280;
+        int wheight = 720;
+        int wwidth =1280;
         bool paused = false;
 
-        Display disp;
-        //SDL_Event e;
-        //SDL_Window* window = nullptr;
-        //SDL_Renderer* renderer = nullptr;
-        //SDL_Texture* texture = nullptr;
-        //SDL_Rect win;
-        //SDL_Rect view;
+        SDL_Event e;
+        SDL_Window* window = nullptr;
+        SDL_Renderer* renderer = nullptr;
+        SDL_Texture* texture = nullptr;
+        SDL_Rect win;
+        SDL_Rect view;
 
         
         std::vector<std::vector<int>> world;
@@ -29,9 +27,7 @@ class GameOfLife {
     public:
         int speed;
         int init();
-        //int clear();
-        //int drawCell();
-        int drawWorld();
+        int clear();
         int draw();
         int next();
         int getInput();         
