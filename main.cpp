@@ -2,10 +2,13 @@
 
 int main()
 {
+    // initialize simulation
     GameOfLife g;
     g.init();
 
     g.draw();
+
+    // Main loop
     while(true)
     {
         g.next();

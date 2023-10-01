@@ -5,22 +5,31 @@
 #include <time.h>
 
 
-
+// Helper function to compute a mod n,
+// including the case where a is negative.
+// C++ built in mod() function doesn't handle
+// the negative case
 int mod_floor(int a, int n) {
     if(a<0) return n-1;
     else if(a==n) return 0;
     else return a;
     
 }
+
+// Helper function to round integer division
+// to the nearest integer. C++ default behaviour is
+// to truncate downwards.
 int find_nearest(int a, int b) {
     return (a + (b/2)) / b;
 }
 
+
+// Initialize SDL and simulation
 int GameOfLife::init()
 {
     //height = 90;
     //width = 160;
-    height = 243;
+    height = 243;   // Dimensions of grid
     width = 432;
 
     SDL_Init(SDL_INIT_VIDEO);
@@ -28,33 +37,37 @@ int GameOfLife::init()
     window = SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,wwidth,wheight,0);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_TARGETTEXTURE);
 
+    // No anti-aliasing
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
+    
+    // Texture is a pixel grid with the world dimensions, scales up to the window size
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height);
 
+    // Set up SDL_Rect with window dimensions
     win.x = win.y = 0;
     win.w = wwidth;
     win.h = wheight;
 
+    // Set up SDL_Rect with viewport dimensions.
+    // Initially full size of grid
     view.x = view.y = 0;
     view.w = width;
     view.h = height;
 
     srand(time(NULL));
 
+    // Initialize simulation world variables to zero
     world = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
     temp = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
     
+    // Initial speed 
     speed = 100;
 
-    
-    //world[10][10]=1;
-    //world[8][11]=1;
-    //world[10][11]=1;
-    //world[10][12]=1;
-    //world[9][12]=1;
     return 0;
 } 
 
+// Clear screen
+// Default black background
 int GameOfLife::clear()
 {
     SDL_SetRenderTarget(renderer, texture);
@@ -66,13 +79,15 @@ int GameOfLife::clear()
     return 0;
 }
 
+// Draw current teration
 int GameOfLife::draw()
 {
     clear();
 
     SDL_SetRenderTarget(renderer, texture);
-    SDL_SetRenderDrawColor(renderer,255,255,255,255);
+    SDL_SetRenderDrawColor(renderer,255,255,255,255);   // White foreground
 
+    // Draw the world. If world cell is 0, draw nothing, if 1, draw a white pixel
     for(int i=0; i<height; i++)
     {
         for(int j=0; j<width; j++)
@@ -81,8 +96,11 @@ int GameOfLife::draw()
         }
     }
 
+    // Green point at center of screen
     SDL_SetRenderDrawColor(renderer,0,255,0,255);
     SDL_RenderDrawPoint(renderer,width/2,height/2);
+
+    // When paused, draw a grey cell wherever the mouse pointer is located
     if(paused)
     {
         int x, y;
@@ -91,15 +109,18 @@ int GameOfLife::draw()
         SDL_RenderDrawPoint(renderer, (find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
     }
     
+    // Draw newly computed texture to window
     SDL_SetRenderTarget(renderer, NULL);
     SDL_RenderCopy(renderer,texture,&view,&win);
     SDL_RenderPresent(renderer);
     return 0;
 }
 
+// Compute next iteration
 int GameOfLife::next()
 {
-    int sum=0;
+    // Count how many of the cells 8 neighbours are alive.
+    int sum=0; 
     for(int i=0; i<height; i++)
     {
         for(int j=0; j<width; j++)
@@ -116,6 +137,13 @@ int GameOfLife::next()
                 sum+=world[mod_floor(i+1,height)][j];
                 sum+=world[mod_floor(i+1,height)][mod_floor(j+1,width)];
 
+            /*
+             * Conway's Game of Life Rules:
+             * 1. If a cell is alive and has fewer than 2 neighbours, it dies
+             * 2. If a cell is alive and has greater than 3 neighbours, it dies
+             * 3. If a cell is dead and has exactly 3 neighbours, it comes to life
+             * The computations are applied to the temporary world array
+             */ 
             if(world[i][j]==1)
             {
                 if(sum<2||sum>3) temp[i][j]=0;
@@ -125,6 +153,8 @@ int GameOfLife::next()
                 
         }
     }
+    
+    // Copy newly computed iteration to primary world array
     for(int i=0; i<height; i++)
     {
         for(int j=0; j<width; j++)
@@ -135,26 +165,33 @@ int GameOfLife::next()
     return 0;
 }
         
+// Handle input using SDl
 int GameOfLife::getInput()
 {    
     while(SDL_PollEvent(&e))
     {
         switch(e.type)
         {
+            // X button on window
             case SDL_QUIT:
                 SDL_Log("Program quit...");
                 exit(0);
                 break;
+
+            // Mouse click
             case SDL_MOUSEBUTTONDOWN:
                 {
                     switch(e.button.button)
                     {
+                        // Left click when paused will place a cell at the mouse cursor
                         case SDL_BUTTON_LEFT:
                             if(paused)
                             {
                                 world[(find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y][(find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x] = 1;
                             }
                             break;
+
+                        // Right click when paused will delete a cell at the mouse cursor
                         case SDL_BUTTON_RIGHT:
                             if(paused)
                             {
@@ -164,10 +201,15 @@ int GameOfLife::getInput()
                     }
                 }
                 break;
+            // keyboard events
             case SDL_KEYDOWN:
                 {
                     switch(e.key.keysym.sym)
                     {
+
+                        // p will toggle pause state.
+                        // While paused, sim will continue to draw and 
+                        // handle input
                         case SDLK_p:
                             paused = !paused;
                             while(paused)
@@ -176,13 +218,15 @@ int GameOfLife::getInput()
                                 getInput();
                             }
                             break;
+                        // n will compute next iteration when paused
                         case SDLK_n:
                             if(paused)
                             {
                                 next();
-                                //draw();
                             }
                             break;
+                        // Brackets will decrease and increase sim speed, respectively
+                        // Speed is clamped to 0 and 500
                         case SDLK_RIGHTBRACKET:
                             speed-=20;
                             if(speed<0) speed=0;
@@ -193,6 +237,7 @@ int GameOfLife::getInput()
                             if(speed>500) speed=500;
                             SDL_Log("delay=%d",speed);
                             break;
+                        // r will randomly populate world
                         case SDLK_r:
                             for(int i=0; i<height; i++)
                             {
@@ -203,10 +248,12 @@ int GameOfLife::getInput()
                             }
                             SDL_Log("randomized world");
                             break;
+                        // q will quit
                         case SDLK_q:
                             SDL_Log("Program quit(q)...");
                             exit(0);
                             break;
+                        // number keys 1-3 will set the zoom level
                         case SDLK_1:
                             SDL_Log("Zoom Level 1");
                             view.w = width;
