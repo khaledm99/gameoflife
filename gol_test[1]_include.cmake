@@ -1,5 +1,0 @@
-if(EXISTS "/home/khaled/Documents/gameoflife/gol_test[1]_tests.cmake")
-  include("/home/khaled/Documents/gameoflife/gol_test[1]_tests.cmake")
-else()
-  add_test(gol_test_NOT_BUILT gol_test_NOT_BUILT)
-endif()

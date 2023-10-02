@@ -20,8 +20,10 @@ int GameOfLife::mod_floor(int a, int n) {
 // Helper function to round integer division
 // to the nearest integer. C++ default behaviour is
 // to truncate downwards.
-int GameOfLife::find_nearest(int a, int b) {
+int GameOfLife::find_nearest(unsigned int a, unsigned int b) {
+    if(b==0) throw "divide by zero";
     return (a + (b/2)) / b;
+    //return round((double)a/(double)b);
 }
 
 

@@ -1,3 +1,0 @@
-ModTest.NonNegativeValues 1 0.00315579
-ModTest.NegativeValues 1 0.00292798
----
