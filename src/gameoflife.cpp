@@ -276,26 +276,17 @@ int GameOfLife::getInput()
                         // number keys 1-3 will set the zoom level
                         case SDLK_1:
                             SDL_Log("Zoom Level 1");
-                            view.w = width;
-                            view.h = height;
-                            view.x = 0;
-                            view.y = 0;
+                            setView(width,height,0,0);
                             draw();
                             break;
                         case SDLK_2:
                             SDL_Log("Zoom Level 2");
-                            view.w = 272;
-                            view.h = 153;
-                            view.x = (width-(view.w))/2;
-                            view.y = (height-(view.h))/2;
+                            setView(272,153,(width-view.w)/2,(height-view.h)/2);
                             draw();
                             break;
                         case SDLK_3:
                             SDL_Log("Zoom Level 3");
-                            view.w = 144;
-                            view.h = 81;
-                            view.x = (width-(view.w))/2;
-                            view.y = (height-(view.h))/2;
+                            setView(144,81,(width-view.w)/2,(height-view.h)/2);
                             draw();
                             break;
                     }
