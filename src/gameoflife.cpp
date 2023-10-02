@@ -28,13 +28,25 @@ int GameOfLife::find_nearest(unsigned int a, unsigned int b) {
 
 
 // Initialize SDL and simulation
-int GameOfLife::init()
+int GameOfLife::initWorld()
 {
-    //height = 90;
-    //width = 160;
     height = 243;   // Dimensions of grid
     width = 432;
 
+    srand(time(NULL));
+
+    // Initialize simulation world variables to zero
+    world = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
+    temp = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
+    
+    // Initial speed 
+    speed = 100;
+
+    return 0;
+} 
+
+int GameOfLife::initDisplay()
+{
     SDL_Init(SDL_INIT_VIDEO);
 
     window = SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,wwidth,wheight,0);
@@ -57,17 +69,8 @@ int GameOfLife::init()
     view.w = width;
     view.h = height;
 
-    srand(time(NULL));
-
-    // Initialize simulation world variables to zero
-    world = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
-    temp = std::vector<std::vector<int>> (height, std::vector<int> (width, 0));
-    
-    // Initial speed 
-    speed = 100;
-
     return 0;
-} 
+}
 
 // Clear screen
 // Default black background

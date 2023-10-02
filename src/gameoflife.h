@@ -32,7 +32,8 @@ class GameOfLife {
 
     public:
         int speed;                              // Speed of simulation
-        int init();                             // Initializes SDL, simulation
+        int initDisplay();                             // Initializes SDL, simulation
+        int initWorld();
         int clear();                            // Clears screen
         int draw();                             // Draws current iteration of world
         int next();                             // Computes next iteration

@@ -4,7 +4,8 @@ int main()
 {
     // initialize simulation
     GameOfLife g;
-    g.init();
+    g.initWorld();
+    g.initDisplay();
 
     g.draw();
 
