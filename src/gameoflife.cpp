@@ -117,16 +117,22 @@ int GameOfLife::draw()
     // When paused, draw a grey cell wherever the mouse pointer is located
     if(paused)
     {
-        int x, y;
-        SDL_GetMouseState(&x,&y);
-        SDL_SetRenderDrawColor(renderer,200,200,200,255);
-        SDL_RenderDrawPoint(renderer, (find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
+        drawCursor();
     }
     
     // Draw newly computed texture to window
     SDL_SetRenderTarget(renderer, NULL);
     SDL_RenderCopy(renderer,texture,&view,&win);
     SDL_RenderPresent(renderer);
+    return 0;
+}
+
+int GameOfLife::drawCursor()
+{
+    int x, y;
+    SDL_GetMouseState(&x,&y);
+    SDL_SetRenderDrawColor(renderer,200,200,200,255);
+    SDL_RenderDrawPoint(renderer, (find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
     return 0;
 }
 

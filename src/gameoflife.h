@@ -38,6 +38,7 @@ class GameOfLife {
         int initWorld();
         int clear();                            // Clears screen
         int draw();                             // Draws current iteration of world
+        int drawCursor();
         int next();                             // Computes next iteration
         int getInput();                         // Handles keyboard input
 
