@@ -58,18 +58,26 @@ int GameOfLife::initDisplay()
     // Texture is a pixel grid with the world dimensions, scales up to the window size
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height);
 
-    // Set up SDL_Rect with window dimensions
-    win.x = win.y = 0;
-    win.w = wwidth;
-    win.h = wheight;
-
-    // Set up SDL_Rect with viewport dimensions.
-    // Initially full size of grid
-    view.x = view.y = 0;
-    view.w = width;
-    view.h = height;
+    setWin(wwidth, wheight, 0, 0);
+    setView(width, height, 0, 0);
 
     return 0;
+}
+
+void GameOfLife::setView(int w, int h, int x, int y)
+{
+    view.x = x;
+    view.y = y;
+    view.w = w;
+    view.h = h;
+}
+
+void GameOfLife::setWin(int w, int h, int x, int y)
+{
+    win.x = x;
+    win.y = y;
+    win.w = w;
+    win.h = h;
 }
 
 // Clear screen

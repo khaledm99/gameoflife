@@ -32,6 +32,8 @@ class GameOfLife {
 
     public:
         int speed;                              // Speed of simulation
+        void setView(int w, int h, int x, int y);
+        void setWin(int w, int h, int x, int y);
         int initDisplay();                             // Initializes SDL, simulation
         int initWorld();
         int clear();                            // Clears screen
