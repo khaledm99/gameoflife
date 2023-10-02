@@ -8,7 +8,7 @@ What started as a simple exercise using a simple game of life implementation to 
 
 this project continues to evolve as I use it to improve my programming skills and learn new frameworks.
 
-Run 'make' to compile, run 'gol' to start the simulation.
+Build with cmake: run cmake . to generate makefile, then run make to build project. Run ./GameOfLife to play simulation. 
 
 The sim is currently a single window with an empty grid. Controls are:
 

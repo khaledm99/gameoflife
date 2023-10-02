@@ -38,6 +38,9 @@ class GameOfLife {
         int next();                             // Computes next iteration
         int getInput();                         // Handles keyboard input
 
+        static int find_nearest(int a, int b);
+        static int mod_floor(int a, int n);
+
 };
 
 #endif

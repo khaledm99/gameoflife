@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/khaled/Documents/gameoflife
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -175,6 +185,19 @@ GameOfLife/fast:
 .PHONY : GameOfLife/fast
 
 #=============================================================================
+# Target rules for targets named gol_test
+
+# Build rule for target.
+gol_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gol_test
+.PHONY : gol_test
+
+# fast build rule for target.
+gol_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/build
+.PHONY : gol_test/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -232,6 +255,7 @@ src/gameoflife.o: src/gameoflife.cpp.o
 # target to build an object file
 src/gameoflife.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/gameoflife.cpp.o
 .PHONY : src/gameoflife.cpp.o
 
 src/gameoflife.i: src/gameoflife.cpp.i
@@ -240,6 +264,7 @@ src/gameoflife.i: src/gameoflife.cpp.i
 # target to preprocess a source file
 src/gameoflife.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/gameoflife.cpp.i
 .PHONY : src/gameoflife.cpp.i
 
 src/gameoflife.s: src/gameoflife.cpp.s
@@ -248,6 +273,7 @@ src/gameoflife.s: src/gameoflife.cpp.s
 # target to generate assembly for a file
 src/gameoflife.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/gameoflife.cpp.s
 .PHONY : src/gameoflife.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -274,6 +300,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/test.o: src/test.cpp.o
+.PHONY : src/test.o
+
+# target to build an object file
+src/test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
+
+src/test.i: src/test.cpp.i
+.PHONY : src/test.i
+
+# target to preprocess a source file
+src/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
+
+src/test.s: src/test.cpp.s
+.PHONY : src/test.s
+
+# target to generate assembly for a file
+src/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -286,9 +336,11 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... GameOfLife"
 	@echo "... gmock"
 	@echo "... gmock_main"
+	@echo "... gol_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
 	@echo "... src/gameoflife.o"
@@ -297,6 +349,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 

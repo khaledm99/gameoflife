@@ -9,9 +9,10 @@
 // including the case where a is negative.
 // C++ built in mod() function doesn't handle
 // the negative case
-int mod_floor(int a, int n) {
-    if(a<0) return n-1;
+int GameOfLife::mod_floor(int a, int n) {
+    if(a<0) return n+a;
     else if(a==n) return 0;
+    else if(a>n) return mod_floor(a-n, n);
     else return a;
     
 }
@@ -19,7 +20,7 @@ int mod_floor(int a, int n) {
 // Helper function to round integer division
 // to the nearest integer. C++ default behaviour is
 // to truncate downwards.
-int find_nearest(int a, int b) {
+int GameOfLife::find_nearest(int a, int b) {
     return (a + (b/2)) / b;
 }
 

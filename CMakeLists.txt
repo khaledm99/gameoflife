@@ -21,6 +21,22 @@ add_executable(${PROJECT_NAME}
    src/gameoflife.cpp
  )
 
- target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
+target_link_libraries(${PROJECT_NAME} ${SDL2_LIBRARIES})
+
+enable_testing()
+
+add_executable(
+    gol_test
+    src/gameoflife.h
+    src/gameoflife.cpp
+    src/test.cpp
+)
+target_link_libraries(gol_test
+    ${SDL2_LIBRARIES}
+    GTest::gtest_main
+)
+
+include(GoogleTest)
+gtest_discover_tests(gol_test)
 
   
