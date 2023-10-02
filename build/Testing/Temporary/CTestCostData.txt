@@ -1,0 +1,6 @@
+gol_test_NOT_BUILT 0 0
+ModTest.NonNegativeValues 5 0.000643884
+ModTest.NegativeValues 5 0.000600759
+RoundTest.ZeroValues 5 0.000767247
+RoundTest.NonZeroValues 1 0.00308889
+---

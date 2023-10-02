@@ -1,0 +1,111 @@
+Start testing: Oct 01 23:14 MDT
+----------------------------------------------------------
+1/4 Testing: ModTest.NonNegativeValues
+1/4 Test: ModTest.NonNegativeValues
+Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NonNegativeValues" "--gtest_also_run_disabled_tests"
+Directory: /home/khaled/Documents/gameoflife/build
+"ModTest.NonNegativeValues" start time: Oct 01 23:14 MDT
+Output:
+----------------------------------------------------------
+Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ModTest.NonNegativeValues
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ModTest
+[ RUN      ] ModTest.NonNegativeValues
+[       OK ] ModTest.NonNegativeValues (0 ms)
+[----------] 1 test from ModTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ModTest.NonNegativeValues" end time: Oct 01 23:14 MDT
+"ModTest.NonNegativeValues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/4 Testing: ModTest.NegativeValues
+2/4 Test: ModTest.NegativeValues
+Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NegativeValues" "--gtest_also_run_disabled_tests"
+Directory: /home/khaled/Documents/gameoflife/build
+"ModTest.NegativeValues" start time: Oct 01 23:14 MDT
+Output:
+----------------------------------------------------------
+Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = ModTest.NegativeValues
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from ModTest
+[ RUN      ] ModTest.NegativeValues
+[       OK ] ModTest.NegativeValues (0 ms)
+[----------] 1 test from ModTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"ModTest.NegativeValues" end time: Oct 01 23:14 MDT
+"ModTest.NegativeValues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/4 Testing: RoundTest.ZeroValues
+3/4 Test: RoundTest.ZeroValues
+Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.ZeroValues" "--gtest_also_run_disabled_tests"
+Directory: /home/khaled/Documents/gameoflife/build
+"RoundTest.ZeroValues" start time: Oct 01 23:14 MDT
+Output:
+----------------------------------------------------------
+Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RoundTest.ZeroValues
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RoundTest
+[ RUN      ] RoundTest.ZeroValues
+[       OK ] RoundTest.ZeroValues (0 ms)
+[----------] 1 test from RoundTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RoundTest.ZeroValues" end time: Oct 01 23:14 MDT
+"RoundTest.ZeroValues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/4 Testing: RoundTest.NonZeroValues
+4/4 Test: RoundTest.NonZeroValues
+Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.NonZeroValues" "--gtest_also_run_disabled_tests"
+Directory: /home/khaled/Documents/gameoflife/build
+"RoundTest.NonZeroValues" start time: Oct 01 23:14 MDT
+Output:
+----------------------------------------------------------
+Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = RoundTest.NonZeroValues
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from RoundTest
+[ RUN      ] RoundTest.NonZeroValues
+[       OK ] RoundTest.NonZeroValues (0 ms)
+[----------] 1 test from RoundTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"RoundTest.NonZeroValues" end time: Oct 01 23:14 MDT
+"RoundTest.NonZeroValues" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 01 23:14 MDT
