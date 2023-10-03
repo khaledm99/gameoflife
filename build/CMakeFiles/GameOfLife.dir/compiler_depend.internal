@@ -4,6 +4,7 @@
 CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.o
  /home/khaled/Documents/gameoflife/src/gameoflife.cpp
  /home/khaled/Documents/gameoflife/src/gameoflife.h
+ /home/khaled/Documents/gameoflife/src/util.h
  /usr/include/SDL2/SDL.h
  /usr/include/SDL2/SDL_assert.h
  /usr/include/SDL2/SDL_atomic.h

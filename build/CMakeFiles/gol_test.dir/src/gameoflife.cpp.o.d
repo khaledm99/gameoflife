@@ -205,7 +205,8 @@ CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: \
  /usr/include/c++/13/backward/binders.h \
  /usr/include/c++/13/bits/range_access.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/khaled/Documents/gameoflife/src/gameoflife.h /usr/include/time.h \
+ /home/khaled/Documents/gameoflife/src/gameoflife.h \
+ /home/khaled/Documents/gameoflife/src/util.h /usr/include/time.h \
  /usr/include/bits/time.h /usr/include/bits/timex.h \
  /usr/include/bits/types/struct_tm.h \
  /usr/include/bits/types/struct_itimerspec.h

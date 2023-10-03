@@ -3,6 +3,7 @@
 
 CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: /home/khaled/Documents/gameoflife/src/gameoflife.cpp \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
+  /home/khaled/Documents/gameoflife/src/util.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
   /usr/include/SDL2/SDL_atomic.h \
@@ -305,6 +306,7 @@ CMakeFiles/gol_test.dir/src/test.cpp.o: /home/khaled/Documents/gameoflife/src/te
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
+  /home/khaled/Documents/gameoflife/src/util.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
   /usr/include/SDL2/SDL_atomic.h \
@@ -1050,6 +1052,8 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/serializeintrin.h:
 
+/usr/lib/gcc/x86_64-redhat-linux/13/include/rtmintrin.h:
+
 /usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
@@ -1073,12 +1077,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 /usr/include/SDL2/SDL_mutex.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/enqcmdintrin.h:
-
-/usr/include/c++/13/bits/move.h:
-
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/SDL2/SDL_stdinc.h:
 
 /usr/include/SDL2/SDL_keycode.h:
 
@@ -1113,8 +1111,6 @@ _deps/googletest-src/googletest/include/gtest/gtest-message.h:
 /usr/include/bits/types/wint_t.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/amxcomplexintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/rtmintrin.h:
 
 /usr/include/bits/struct_rwlock.h:
 
@@ -1258,6 +1254,12 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
 
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/SDL2/SDL_stdinc.h:
+
+/usr/include/c++/13/bits/move.h:
+
 /usr/include/pthread.h:
 
 /usr/include/SDL2/SDL_hints.h:
@@ -1279,6 +1281,8 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avxvnniintrin.h:
 
 /usr/include/bits/types/idtype_t.h:
+
+/home/khaled/Documents/gameoflife/src/util.h:
 
 /usr/include/SDL2/SDL_power.h:
 
@@ -1309,6 +1313,18 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 /usr/include/c++/13/bits/invoke.h:
 
 /usr/include/SDL2/SDL_pixels.h:
+
+_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
+
+/usr/include/SDL2/SDL_mouse.h:
+
+_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
+
+/usr/include/SDL2/SDL_error.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
 
 /usr/include/SDL2/SDL_assert.h:
 
@@ -1355,18 +1371,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/SDL2/SDL_config-x86_64.h:
-
-_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
-
-/usr/include/SDL2/SDL_mouse.h:
-
-_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
-
-/usr/include/SDL2/SDL_error.h:
-
-/usr/include/c++/13/bits/stl_vector.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
 
 /usr/include/bits/stdlib-float.h:
 

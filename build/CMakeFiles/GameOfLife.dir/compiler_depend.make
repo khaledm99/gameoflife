@@ -3,6 +3,7 @@
 
 CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.o: /home/khaled/Documents/gameoflife/src/gameoflife.cpp \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
+  /home/khaled/Documents/gameoflife/src/util.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
   /usr/include/SDL2/SDL_atomic.h \
@@ -589,6 +590,8 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/serializeintrin.h:
 
+/usr/lib/gcc/x86_64-redhat-linux/13/include/rtmintrin.h:
+
 /usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h:
 
 /usr/include/c++/13/bits/memoryfwd.h:
@@ -606,12 +609,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/SDL2/SDL_mutex.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/enqcmdintrin.h:
-
-/usr/include/c++/13/bits/move.h:
-
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/SDL2/SDL_stdinc.h:
 
 /usr/include/SDL2/SDL_keycode.h:
 
@@ -640,8 +637,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/bits/types/wint_t.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/amxcomplexintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/rtmintrin.h:
 
 /usr/include/bits/struct_rwlock.h:
 
@@ -739,6 +734,12 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
 
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/SDL2/SDL_stdinc.h:
+
+/usr/include/c++/13/bits/move.h:
+
 /usr/include/SDL2/SDL_hints.h:
 
 /usr/include/SDL2/SDL_keyboard.h:
@@ -754,6 +755,8 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/bits/types/struct_FILE.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avxvnniintrin.h:
+
+/home/khaled/Documents/gameoflife/src/util.h:
 
 /usr/include/SDL2/SDL_power.h:
 
@@ -780,6 +783,14 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/c++/13/bits/invoke.h:
 
 /usr/include/SDL2/SDL_pixels.h:
+
+/usr/include/SDL2/SDL_mouse.h:
+
+/usr/include/SDL2/SDL_error.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
 
 /usr/include/SDL2/SDL_assert.h:
 
@@ -818,14 +829,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/SDL2/SDL_config-x86_64.h:
-
-/usr/include/SDL2/SDL_mouse.h:
-
-/usr/include/SDL2/SDL_error.h:
-
-/usr/include/c++/13/bits/stl_vector.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
 
 /usr/include/bits/stdlib-float.h:
 
