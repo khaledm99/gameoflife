@@ -1,10 +1,10 @@
-Start testing: Oct 01 23:14 MDT
+Start testing: Oct 03 11:13 MDT
 ----------------------------------------------------------
-1/4 Testing: ModTest.NonNegativeValues
-1/4 Test: ModTest.NonNegativeValues
+1/6 Testing: ModTest.NonNegativeValues
+1/6 Test: ModTest.NonNegativeValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NonNegativeValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"ModTest.NonNegativeValues" start time: Oct 01 23:14 MDT
+"ModTest.NonNegativeValues" start time: Oct 03 11:13 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -23,15 +23,15 @@ Note: Google Test filter = ModTest.NonNegativeValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ModTest.NonNegativeValues" end time: Oct 01 23:14 MDT
+"ModTest.NonNegativeValues" end time: Oct 03 11:13 MDT
 "ModTest.NonNegativeValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/4 Testing: ModTest.NegativeValues
-2/4 Test: ModTest.NegativeValues
+2/6 Testing: ModTest.NegativeValues
+2/6 Test: ModTest.NegativeValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NegativeValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"ModTest.NegativeValues" start time: Oct 01 23:14 MDT
+"ModTest.NegativeValues" start time: Oct 03 11:13 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -50,15 +50,15 @@ Note: Google Test filter = ModTest.NegativeValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ModTest.NegativeValues" end time: Oct 01 23:14 MDT
+"ModTest.NegativeValues" end time: Oct 03 11:13 MDT
 "ModTest.NegativeValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/4 Testing: RoundTest.ZeroValues
-3/4 Test: RoundTest.ZeroValues
+3/6 Testing: RoundTest.ZeroValues
+3/6 Test: RoundTest.ZeroValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.ZeroValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"RoundTest.ZeroValues" start time: Oct 01 23:14 MDT
+"RoundTest.ZeroValues" start time: Oct 03 11:13 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -77,15 +77,15 @@ Note: Google Test filter = RoundTest.ZeroValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"RoundTest.ZeroValues" end time: Oct 01 23:14 MDT
+"RoundTest.ZeroValues" end time: Oct 03 11:13 MDT
 "RoundTest.ZeroValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/4 Testing: RoundTest.NonZeroValues
-4/4 Test: RoundTest.NonZeroValues
+4/6 Testing: RoundTest.NonZeroValues
+4/6 Test: RoundTest.NonZeroValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.NonZeroValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"RoundTest.NonZeroValues" start time: Oct 01 23:14 MDT
+"RoundTest.NonZeroValues" start time: Oct 03 11:13 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -104,8 +104,62 @@ Note: Google Test filter = RoundTest.NonZeroValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"RoundTest.NonZeroValues" end time: Oct 01 23:14 MDT
+"RoundTest.NonZeroValues" end time: Oct 03 11:13 MDT
 "RoundTest.NonZeroValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 01 23:14 MDT
+5/6 Testing: SpeedTest.IncreaseSpeed
+5/6 Test: SpeedTest.IncreaseSpeed
+Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SpeedTest.IncreaseSpeed" "--gtest_also_run_disabled_tests"
+Directory: /home/khaled/Documents/gameoflife/build
+"SpeedTest.IncreaseSpeed" start time: Oct 03 11:13 MDT
+Output:
+----------------------------------------------------------
+Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SpeedTest.IncreaseSpeed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpeedTest
+[ RUN      ] SpeedTest.IncreaseSpeed
+[       OK ] SpeedTest.IncreaseSpeed (0 ms)
+[----------] 1 test from SpeedTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpeedTest.IncreaseSpeed" end time: Oct 03 11:13 MDT
+"SpeedTest.IncreaseSpeed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/6 Testing: SpeedTest.DecreaseSpeed
+6/6 Test: SpeedTest.DecreaseSpeed
+Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SpeedTest.DecreaseSpeed" "--gtest_also_run_disabled_tests"
+Directory: /home/khaled/Documents/gameoflife/build
+"SpeedTest.DecreaseSpeed" start time: Oct 03 11:13 MDT
+Output:
+----------------------------------------------------------
+Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
+Note: Google Test filter = SpeedTest.DecreaseSpeed
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from SpeedTest
+[ RUN      ] SpeedTest.DecreaseSpeed
+[       OK ] SpeedTest.DecreaseSpeed (0 ms)
+[----------] 1 test from SpeedTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"SpeedTest.DecreaseSpeed" end time: Oct 03 11:13 MDT
+"SpeedTest.DecreaseSpeed" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 03 11:13 MDT

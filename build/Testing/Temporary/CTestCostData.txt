@@ -1,6 +1,8 @@
 gol_test_NOT_BUILT 0 0
-ModTest.NonNegativeValues 5 0.000643884
-ModTest.NegativeValues 5 0.000600759
-RoundTest.ZeroValues 5 0.000767247
-RoundTest.NonZeroValues 1 0.00308889
+ModTest.NonNegativeValues 6 0.000695489
+ModTest.NegativeValues 6 0.000605284
+RoundTest.ZeroValues 6 0.000610225
+RoundTest.NonZeroValues 2 0.00240412
+SpeedTest.IncreaseSpeed 1 0.0046851
+SpeedTest.DecreaseSpeed 1 0.00457732
 ---

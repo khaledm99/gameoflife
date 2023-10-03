@@ -28,3 +28,24 @@ TEST(RoundTest, NonZeroValues)
     EXPECT_EQ(GameOfLife::find_nearest(1,2), 1);    // round up 
     EXPECT_EQ(GameOfLife::find_nearest(1,3), 0);    // round down
 }
+
+TEST(SpeedTest, IncreaseSpeed)
+{
+   GameOfLife g;
+   g.initWorld();
+   EXPECT_EQ(g.getSpeed(), 100);
+   g.changeSpeed(-20);
+   EXPECT_EQ(g.getSpeed(), 80);
+   g.changeSpeed(-100);
+   EXPECT_EQ(g.getSpeed(), 0);
+}
+TEST(SpeedTest, DecreaseSpeed)
+{
+    GameOfLife g;
+    g.initWorld();
+    EXPECT_EQ(g.getSpeed(), 100);
+    g.changeSpeed(20);
+    EXPECT_EQ(g.getSpeed(), 120);
+    g.changeSpeed(10000);
+    EXPECT_EQ(g.getSpeed(), 500);
+}
