@@ -66,18 +66,18 @@ int GameOfLife::initDisplay()
 
 void GameOfLife::setView(int w, int h, int x, int y)
 {
-    view.x = x;
-    view.y = y;
     view.w = w;
     view.h = h;
+    view.x = x;
+    view.y = y;
 }
 
 void GameOfLife::setWin(int w, int h, int x, int y)
 {
-    win.x = x;
-    win.y = y;
     win.w = w;
     win.h = h;
+    win.x = x;
+    win.y = y;
 }
 
 // Clear screen
@@ -248,14 +248,10 @@ int GameOfLife::getInput()
                         // Brackets will decrease and increase sim speed, respectively
                         // Speed is clamped to 0 and 500
                         case SDLK_RIGHTBRACKET:
-                            speed-=20;
-                            if(speed<0) speed=0;
-                            SDL_Log("delay=%d",speed);
+                            changeSpeed(-20);
                             break;
                         case SDLK_LEFTBRACKET:
-                            speed+=20;
-                            if(speed>500) speed=500;
-                            SDL_Log("delay=%d",speed);
+                            changeSpeed(20);
                             break;
                         // r will randomly populate world
                         case SDLK_r:
@@ -296,6 +292,18 @@ int GameOfLife::getInput()
     }
     
     return 0;
+}
+
+int GameOfLife::changeSpeed(int amount)
+{
+    speed+=amount;
+    if(speed<0) speed=0;
+    if(speed>MAX_SPEED) speed=MAX_SPEED;
+    return speed;
+}
+int GameOfLife::getSpeed()
+{
+    return speed;
 }
 
 

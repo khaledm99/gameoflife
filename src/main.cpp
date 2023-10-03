@@ -15,7 +15,7 @@ int main()
         g.next();
         g.draw();
         g.getInput();
-        SDL_Delay(g.speed);
+        SDL_Delay(g.getSpeed());
     }
     return 0;
 }

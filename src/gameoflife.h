@@ -14,6 +14,8 @@ class GameOfLife {
     private:
         int height;         // Dimensions of simulation grid
         int width;
+        int speed;
+        const int MAX_SPEED = 500;
         int wheight = 720;  // Dimensions of window, grid is scaled to fit
         int wwidth =1280;
         bool paused = false;   
@@ -31,7 +33,8 @@ class GameOfLife {
         std::vector<std::vector<int>> temp;     // Temporary grid for updating world
 
     public:
-        int speed;                              // Speed of simulation
+        int changeSpeed(int amount);
+        int getSpeed();
         void setView(int w, int h, int x, int y);
         void setWin(int w, int h, int x, int y);
         int initDisplay();                             // Initializes SDL, simulation
