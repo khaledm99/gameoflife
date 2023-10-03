@@ -1,14 +1,15 @@
 gol_test_NOT_BUILT 0 0
-ModTest.NonNegativeValues 10 0.000400922
-ModTest.NegativeValues 10 0.000473006
-RoundTest.ZeroValues 10 0.000385561
-RoundTest.NonZeroValues 6 0.000623466
-SpeedTest.IncreaseSpeed 5 0.000740428
-SpeedTest.DecreaseSpeed 5 0.000731295
-GOLConstructorTest.NonPosVals 3 0.00135917
-GOLConstructorTest.ValidConstructor 3 0.00143449
-SetViewTest.InvalidSettings 2 0.00229508
-SetViewTest.ValidSettings 1 0.00401838
-SetWinTest.InvalidSettings 1 0.00402468
-SetWinTest.ValidSettings 1 0.00398575
+ModTest.NonNegativeValues 14 0.000270871
+ModTest.NegativeValues 14 0.000207896
+RoundTest.ZeroValues 14 0.000188995
+RoundTest.NonZeroValues 10 0.000246449
+SpeedTest.IncreaseSpeed 9 0.000429928
+SpeedTest.DecreaseSpeed 9 0.000286979
+GOLConstructorTest.NonPosVals 7 0.00037248
+GOLConstructorTest.ValidConstructor 7 0.000351428
+SetViewTest.InvalidSettings 6 0.000417932
+SetViewTest.ValidSettings 5 0.000484958
+SetWinTest.InvalidSettings 5 0.000511377
+SetWinTest.ValidSettings 5 0.000705633
+NextFrameTest.LineOscillator 3 0.000908401
 ---

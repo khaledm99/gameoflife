@@ -46,6 +46,11 @@ class GameOfLife {
                                                        //
         GameOfLife(int w, int h);               // Constructor
         ~GameOfLife();
+
+        void setCell(int x, int y);
+        void eraseCell(int x, int y);
+        int getCell(int x, int y);
+
         int clear();                            // Clears screen
         int draw();                             // Draws current iteration of world
         int drawCursor();

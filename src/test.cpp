@@ -116,3 +116,24 @@ TEST(SetWinTest, ValidSettings)
     EXPECT_EQ(g.getWin().w, 1920);
     EXPECT_EQ(g.getWin().h, 720);
 }
+
+TEST(NextFrameTest, LineOscillator)
+{
+    std::vector<std::vector<int>> testvec =
+    { {0,0,0,0},
+      {1,1,1,0},
+      {0,0,0,0},
+      {0,0,0,0}};
+
+    GameOfLife g(4,4);
+    g.setCell(1,0);
+    g.setCell(1,1);
+    g.setCell(1,2);
+    g.next();
+    EXPECT_TRUE(g.getWorld()==testvec);
+    for(auto &r : g.getWorld()) 
+    {
+        for(auto &c : r) printf("%d",c);
+    }
+}
+

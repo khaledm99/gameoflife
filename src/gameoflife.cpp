@@ -343,6 +343,19 @@ int GameOfLife::getSpeed()
     return speed;
 }
 
+void GameOfLife::setCell(int x, int y)
+{
+    world[y][x] = 1;
+}
+void GameOfLife::eraseCell(int x, int y)
+{
+    world[y][x] = 0;
+}
+int GameOfLife::getCell(int x, int y)
+{
+    return world[y][x];
+}
+
 
 
 
