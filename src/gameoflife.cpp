@@ -85,14 +85,32 @@ int GameOfLife::initDisplay()
 
 void GameOfLife::setView(int w, int h, int x, int y)
 {
+    if(w<1 || h<1 || x<0 || y<0)
+    {
+        throw("Dimensions must be positive, origin must be nonnegative");
+        return;
+    }
     view.w = w;
     view.h = h;
     view.x = x;
     view.y = y;
 }
+SDL_Rect GameOfLife::getView()
+{
+    return view;
+}
+SDL_Rect GameOfLife::getWin()
+{
+    return win;
+}
 
 void GameOfLife::setWin(int w, int h, int x, int y)
 {
+    if(w<1 || h<1 || x<0 || y<0)
+    {
+        throw("Dimensions must be positive, origin must be nonnegative");
+        return;
+    }
     win.w = w;
     win.h = h;
     win.x = x;

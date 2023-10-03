@@ -64,3 +64,55 @@ TEST(SpeedTest, DecreaseSpeed)
     g.changeSpeed(10000);
     EXPECT_EQ(g.getSpeed(), 500);
 }
+
+TEST(SetViewTest, InvalidSettings)
+{
+   GameOfLife g(1,1);
+   SDL_Rect initialview = g.getView();
+   EXPECT_ANY_THROW(g.setView(0,0,10,10));
+   EXPECT_ANY_THROW(g.setView(0,1,10,10));
+   EXPECT_ANY_THROW(g.setView(1,0,10,10));
+   EXPECT_ANY_THROW(g.setView(1,1,-1,-1));
+   EXPECT_ANY_THROW(g.setView(1,1,0,-1));
+   EXPECT_ANY_THROW(g.setView(1,1,-1,0));
+   EXPECT_EQ(g.getView().x, initialview.x);
+   EXPECT_EQ(g.getView().y, initialview.y);
+   EXPECT_EQ(g.getView().w, initialview.w);
+   EXPECT_EQ(g.getView().h, initialview.h);
+}
+
+TEST(SetViewTest, ValidSettings)
+{
+    GameOfLife g(1,1);
+    g.setView(1920,720,0,0);
+    EXPECT_EQ(g.getView().x, 0);
+    EXPECT_EQ(g.getView().y, 0);
+    EXPECT_EQ(g.getView().w, 1920);
+    EXPECT_EQ(g.getView().h, 720);
+}
+
+TEST(SetWinTest, InvalidSettings)
+{
+   GameOfLife g(1,1);
+   SDL_Rect initialview = g.getWin();
+   EXPECT_ANY_THROW(g.setWin(0,0,10,10));
+   EXPECT_ANY_THROW(g.setWin(0,1,10,10));
+   EXPECT_ANY_THROW(g.setWin(1,0,10,10));
+   EXPECT_ANY_THROW(g.setWin(1,1,-1,-1));
+   EXPECT_ANY_THROW(g.setWin(1,1,0,-1));
+   EXPECT_ANY_THROW(g.setWin(1,1,-1,0));
+   EXPECT_EQ(g.getWin().x, initialview.x);
+   EXPECT_EQ(g.getWin().y, initialview.y);
+   EXPECT_EQ(g.getWin().w, initialview.w);
+   EXPECT_EQ(g.getWin().h, initialview.h);
+}
+
+TEST(SetWinTest, ValidSettings)
+{
+    GameOfLife g(1,1);
+    g.setWin(1920,720,0,0);
+    EXPECT_EQ(g.getWin().x, 0);
+    EXPECT_EQ(g.getWin().y, 0);
+    EXPECT_EQ(g.getWin().w, 1920);
+    EXPECT_EQ(g.getWin().h, 720);
+}

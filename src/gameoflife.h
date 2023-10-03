@@ -39,6 +39,8 @@ class GameOfLife {
         int getWidth();
         std::vector<std::vector<int>> getWorld();
         void setView(int w, int h, int x, int y);
+        SDL_Rect getView();
+        SDL_Rect getWin();
         void setWin(int w, int h, int x, int y);
         int initDisplay();                             // Initializes SDL, simulation
                                                        //
