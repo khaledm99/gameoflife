@@ -1,8 +1,10 @@
 gol_test_NOT_BUILT 0 0
-ModTest.NonNegativeValues 6 0.000695489
-ModTest.NegativeValues 6 0.000605284
-RoundTest.ZeroValues 6 0.000610225
-RoundTest.NonZeroValues 2 0.00240412
-SpeedTest.IncreaseSpeed 1 0.0046851
-SpeedTest.DecreaseSpeed 1 0.00457732
+ModTest.NonNegativeValues 8 0.000429504
+ModTest.NegativeValues 8 0.000440272
+RoundTest.ZeroValues 8 0.000481918
+RoundTest.NonZeroValues 4 0.000772268
+SpeedTest.IncreaseSpeed 3 0.00118792
+SpeedTest.DecreaseSpeed 3 0.00121518
+GOLConstructorTest.NonPosVals 1 0.00315049
+GOLConstructorTest.ValidConstructor 1 0.0032268
 ---

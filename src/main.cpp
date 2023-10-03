@@ -3,8 +3,7 @@
 int main()
 {
     // initialize simulation
-    GameOfLife g;
-    g.initWorld();
+    GameOfLife g(432, 243);
     g.initDisplay();
 
     g.draw();

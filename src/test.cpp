@@ -29,10 +29,26 @@ TEST(RoundTest, NonZeroValues)
     EXPECT_EQ(GameOfLife::find_nearest(1,3), 0);    // round down
 }
 
+TEST(GOLConstructorTest, NonPosVals)
+{
+    EXPECT_ANY_THROW(new GameOfLife(0,0));
+    EXPECT_ANY_THROW(new GameOfLife(-1,1));
+    EXPECT_ANY_THROW(new GameOfLife(1,-1));
+}
+TEST(GOLConstructorTest, ValidConstructor)
+{
+    GameOfLife g(1,1);
+    EXPECT_EQ(g.getHeight(),1);
+    EXPECT_EQ(g.getWidth(),1);
+    EXPECT_EQ(g.getSpeed(),100);
+    EXPECT_EQ(g.getWorld().size(),1);
+    EXPECT_EQ((g.getWorld())[0].size(),1);
+}
+
+
 TEST(SpeedTest, IncreaseSpeed)
 {
-   GameOfLife g;
-   g.initWorld();
+   GameOfLife g(1,1);
    EXPECT_EQ(g.getSpeed(), 100);
    g.changeSpeed(-20);
    EXPECT_EQ(g.getSpeed(), 80);
@@ -41,8 +57,7 @@ TEST(SpeedTest, IncreaseSpeed)
 }
 TEST(SpeedTest, DecreaseSpeed)
 {
-    GameOfLife g;
-    g.initWorld();
+    GameOfLife g(1,1);
     EXPECT_EQ(g.getSpeed(), 100);
     g.changeSpeed(20);
     EXPECT_EQ(g.getSpeed(), 120);

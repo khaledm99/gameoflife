@@ -35,10 +35,15 @@ class GameOfLife {
     public:
         int changeSpeed(int amount);
         int getSpeed();
+        int getHeight();
+        int getWidth();
+        std::vector<std::vector<int>> getWorld();
         void setView(int w, int h, int x, int y);
         void setWin(int w, int h, int x, int y);
         int initDisplay();                             // Initializes SDL, simulation
-        int initWorld();
+                                                       //
+        GameOfLife(int w, int h);               // Constructor
+        ~GameOfLife();
         int clear();                            // Clears screen
         int draw();                             // Draws current iteration of world
         int drawCursor();

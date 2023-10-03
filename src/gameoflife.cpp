@@ -27,11 +27,16 @@ int GameOfLife::find_nearest(unsigned int a, unsigned int b) {
 }
 
 
-// Initialize SDL and simulation
-int GameOfLife::initWorld()
+// Initialize simulation
+GameOfLife::GameOfLife(int w, int h)
 {
-    height = 243;   // Dimensions of grid
-    width = 432;
+    if(w<1 || h<1) 
+    {
+        throw("Dimensions must be positive");
+        exit(1);
+    }
+    height = h;   // Dimensions of grid
+    width = w;
 
     srand(time(NULL));
 
@@ -41,9 +46,23 @@ int GameOfLife::initWorld()
     
     // Initial speed 
     speed = 100;
-
-    return 0;
 } 
+
+int GameOfLife::getHeight()
+{
+    return height;
+}
+int GameOfLife::getWidth()
+{
+    return width;
+}
+std::vector<std::vector<int>> GameOfLife::getWorld()
+{
+    return world;
+}
+
+GameOfLife::~GameOfLife()
+{}
 
 int GameOfLife::initDisplay()
 {
