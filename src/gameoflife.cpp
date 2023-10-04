@@ -293,12 +293,12 @@ int GameOfLife::getInput()
                             break;
                         case SDLK_2:
                             SDL_Log("Zoom Level 2");
-                            setView(272,153,(width-view.w)/2,(height-view.h)/2);
+                            setView(272,153,(width-272)/2,(height-153)/2);
                             draw();
                             break;
                         case SDLK_3:
                             SDL_Log("Zoom Level 3");
-                            setView(144,81,(width-view.w)/2,(height-view.h)/2);
+                            setView(144,81,(width-144)/2,(height-81)/2);
                             draw();
                             break;
                     }
