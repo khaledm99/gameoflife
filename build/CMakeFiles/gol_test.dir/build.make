@@ -69,10 +69,24 @@ include CMakeFiles/gol_test.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/gol_test.dir/flags.make
 
+CMakeFiles/gol_test.dir/src/display.cpp.o: CMakeFiles/gol_test.dir/flags.make
+CMakeFiles/gol_test.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/src/display.cpp
+CMakeFiles/gol_test.dir/src/display.cpp.o: CMakeFiles/gol_test.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gol_test.dir/src/display.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gol_test.dir/src/display.cpp.o -MF CMakeFiles/gol_test.dir/src/display.cpp.o.d -o CMakeFiles/gol_test.dir/src/display.cpp.o -c /home/khaled/Documents/gameoflife/src/display.cpp
+
+CMakeFiles/gol_test.dir/src/display.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/gol_test.dir/src/display.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/khaled/Documents/gameoflife/src/display.cpp > CMakeFiles/gol_test.dir/src/display.cpp.i
+
+CMakeFiles/gol_test.dir/src/display.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/gol_test.dir/src/display.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/khaled/Documents/gameoflife/src/display.cpp -o CMakeFiles/gol_test.dir/src/display.cpp.s
+
 CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: CMakeFiles/gol_test.dir/flags.make
 CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: /home/khaled/Documents/gameoflife/src/gameoflife.cpp
 CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: CMakeFiles/gol_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/gol_test.dir/src/gameoflife.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gol_test.dir/src/gameoflife.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gol_test.dir/src/gameoflife.cpp.o -MF CMakeFiles/gol_test.dir/src/gameoflife.cpp.o.d -o CMakeFiles/gol_test.dir/src/gameoflife.cpp.o -c /home/khaled/Documents/gameoflife/src/gameoflife.cpp
 
 CMakeFiles/gol_test.dir/src/gameoflife.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/gol_test.dir/src/gameoflife.cpp.s: cmake_force
 CMakeFiles/gol_test.dir/src/test.cpp.o: CMakeFiles/gol_test.dir/flags.make
 CMakeFiles/gol_test.dir/src/test.cpp.o: /home/khaled/Documents/gameoflife/src/test.cpp
 CMakeFiles/gol_test.dir/src/test.cpp.o: CMakeFiles/gol_test.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/gol_test.dir/src/test.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/gol_test.dir/src/test.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/gol_test.dir/src/test.cpp.o -MF CMakeFiles/gol_test.dir/src/test.cpp.o.d -o CMakeFiles/gol_test.dir/src/test.cpp.o -c /home/khaled/Documents/gameoflife/src/test.cpp
 
 CMakeFiles/gol_test.dir/src/test.cpp.i: cmake_force
@@ -99,12 +113,14 @@ CMakeFiles/gol_test.dir/src/test.cpp.s: cmake_force
 
 # Object files for target gol_test
 gol_test_OBJECTS = \
+"CMakeFiles/gol_test.dir/src/display.cpp.o" \
 "CMakeFiles/gol_test.dir/src/gameoflife.cpp.o" \
 "CMakeFiles/gol_test.dir/src/test.cpp.o"
 
 # External object files for target gol_test
 gol_test_EXTERNAL_OBJECTS =
 
+gol_test: CMakeFiles/gol_test.dir/src/display.cpp.o
 gol_test: CMakeFiles/gol_test.dir/src/gameoflife.cpp.o
 gol_test: CMakeFiles/gol_test.dir/src/test.cpp.o
 gol_test: CMakeFiles/gol_test.dir/build.make
@@ -113,7 +129,7 @@ gol_test: /usr/lib64/libSDL2-2.0.so.0.2600.3
 gol_test: lib/libgtest_main.a
 gol_test: lib/libgtest.a
 gol_test: CMakeFiles/gol_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable gol_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable gol_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gol_test.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -D TEST_TARGET=gol_test -D TEST_EXECUTABLE=/home/khaled/Documents/gameoflife/build/gol_test -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/home/khaled/Documents/gameoflife/build -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=gol_test_TESTS -D CTEST_FILE=/home/khaled/Documents/gameoflife/build/gol_test[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake/Modules/GoogleTestAddTests.cmake
 

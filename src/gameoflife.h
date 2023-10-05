@@ -3,6 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include <vector>
+#include "display.h"
 
 // Handles the simulation logic of Conway's Game of Life
 // Directly uses SDL2 for graphics, input handling, and
@@ -20,6 +21,7 @@ class GameOfLife {
         int wwidth =1280;
         bool paused = false;   
 
+        Display display;
         // SDL boilerplate
         SDL_Event e;
         SDL_Window* window = nullptr;

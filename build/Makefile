@@ -249,6 +249,33 @@ gtest_main/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
 
+src/display.o: src/display.cpp.o
+.PHONY : src/display.o
+
+# target to build an object file
+src/display.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/src/display.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/display.cpp.o
+.PHONY : src/display.cpp.o
+
+src/display.i: src/display.cpp.i
+.PHONY : src/display.i
+
+# target to preprocess a source file
+src/display.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/src/display.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/display.cpp.i
+.PHONY : src/display.cpp.i
+
+src/display.s: src/display.cpp.s
+.PHONY : src/display.s
+
+# target to generate assembly for a file
+src/display.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GameOfLife.dir/build.make CMakeFiles/GameOfLife.dir/src/display.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/src/display.cpp.s
+.PHONY : src/display.cpp.s
+
 src/gameoflife.o: src/gameoflife.cpp.o
 .PHONY : src/gameoflife.o
 
@@ -343,6 +370,9 @@ help:
 	@echo "... gol_test"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... src/display.o"
+	@echo "... src/display.i"
+	@echo "... src/display.s"
 	@echo "... src/gameoflife.o"
 	@echo "... src/gameoflife.i"
 	@echo "... src/gameoflife.s"

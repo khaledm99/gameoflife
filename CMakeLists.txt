@@ -18,6 +18,8 @@ include_directories(${SDL2_INCLUDE_DIRS})
 add_executable(${PROJECT_NAME}
    src/main.cpp
    src/util.h
+   src/display.h
+   src/display.cpp
    src/gameoflife.h
    src/gameoflife.cpp
  )
@@ -29,6 +31,8 @@ enable_testing()
 add_executable(
     gol_test
     src/util.h
+    src/display.h
+    src/display.cpp
     src/gameoflife.h
     src/gameoflife.cpp
     src/test.cpp
