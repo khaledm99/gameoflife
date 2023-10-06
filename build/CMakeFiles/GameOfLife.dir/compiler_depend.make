@@ -110,14 +110,53 @@ CMakeFiles/GameOfLife.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/s
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/c++/13/backward/binders.h \
+  /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/alloc_traits.h \
+  /usr/include/c++/13/bits/allocator.h \
+  /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
+  /usr/include/c++/13/bits/exception.h \
+  /usr/include/c++/13/bits/exception_defines.h \
+  /usr/include/c++/13/bits/functexcept.h \
+  /usr/include/c++/13/bits/functional_hash.h \
+  /usr/include/c++/13/bits/hash_bytes.h \
+  /usr/include/c++/13/bits/invoke.h \
+  /usr/include/c++/13/bits/memoryfwd.h \
+  /usr/include/c++/13/bits/move.h \
+  /usr/include/c++/13/bits/new_allocator.h \
+  /usr/include/c++/13/bits/predefined_ops.h \
+  /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/stl_algobase.h \
+  /usr/include/c++/13/bits/stl_bvector.h \
+  /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_function.h \
+  /usr/include/c++/13/bits/stl_iterator.h \
+  /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
+  /usr/include/c++/13/bits/stl_iterator_base_types.h \
+  /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_uninitialized.h \
+  /usr/include/c++/13/bits/stl_vector.h \
+  /usr/include/c++/13/bits/utility.h \
+  /usr/include/c++/13/bits/vector.tcc \
   /usr/include/c++/13/cmath \
   /usr/include/c++/13/cstdlib \
+  /usr/include/c++/13/debug/assertions.h \
+  /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/ext/alloc_traits.h \
+  /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/math.h \
+  /usr/include/c++/13/new \
   /usr/include/c++/13/stdlib.h \
+  /usr/include/c++/13/type_traits \
+  /usr/include/c++/13/vector \
+  /usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h \
@@ -801,51 +840,67 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /home/khaled/Documents/gameoflife/src/main.cpp:
 
-/usr/include/c++/13/vector:
+/usr/include/bits/types/struct_tm.h:
 
-/usr/include/c++/13/type_traits:
+/usr/include/bits/time.h:
 
-/usr/include/c++/13/initializer_list:
+/home/khaled/Documents/gameoflife/src/gameoflife.cpp:
 
-/usr/include/c++/13/ext/alloc_traits.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveintrin.h:
 
-/usr/include/c++/13/debug/debug.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xsavecintrin.h:
 
-/usr/include/c++/13/debug/assertions.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/x86gprintrin.h:
 
-/usr/include/c++/13/bits/stl_vector.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/wmmintrin.h:
 
-/usr/include/c++/13/bits/stl_pair.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/wbnoinvdintrin.h:
 
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/vpclmulqdqintrin.h:
 
-/usr/include/c++/13/ext/numeric_traits.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/vaesintrin.h:
 
-/usr/include/c++/13/bits/stl_iterator.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/tsxldtrkintrin.h:
 
-/usr/include/c++/13/bits/stl_construct.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/tbmintrin.h:
 
-/usr/include/c++/13/bits/stl_algobase.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/stdint.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h:
 
 /usr/include/c++/13/bits/range_access.h:
 
-/usr/include/c++/13/bits/predefined_ops.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h:
 
-/usr/include/inttypes.h:
+/usr/include/c++/13/bits/memoryfwd.h:
 
-/usr/include/bits/endianness.h:
+/usr/include/bits/timex.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/bmiintrin.h:
+/usr/include/c++/13/bits/hash_bytes.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/popcntintrin.h:
+/usr/include/c++/13/bits/functexcept.h:
 
-/usr/include/c++/13/bits/requires_hosted.h:
+/usr/include/bits/types/__fpos64_t.h:
 
 /usr/include/c++/13/bits/cpp_type_traits.h:
+
+/usr/include/c++/13/backward/binders.h:
+
+/usr/include/SDL2/SDL_mutex.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/enqcmdintrin.h:
+
+/usr/include/c++/13/bits/move.h:
+
+/usr/include/bits/types/sigset_t.h:
+
+/usr/include/SDL2/SDL_stdinc.h:
 
 /usr/include/SDL2/SDL_keycode.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512erintrin.h:
+
+/usr/include/c++/13/bit:
 
 /usr/include/bits/timesize.h:
 
@@ -859,6 +914,10 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avxvnniint8intrin.h:
 
+/usr/include/c++/13/bits/allocator.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/clflushoptintrin.h:
+
 /usr/include/bits/types/wint_t.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/amxcomplexintrin.h:
@@ -871,8 +930,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vp2intersectintrin.h:
 
-/usr/include/alloca.h:
-
 /usr/include/bits/types/clock_t.h:
 
 /usr/include/bits/types/__fpos_t.h:
@@ -881,25 +938,15 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/bits/mathcalls.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h:
-
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/bits/stdio_lim.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/prfchwintrin.h:
 
-/usr/include/bits/time.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h:
-
 /usr/include/bits/types/__locale_t.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512pfintrin.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/c++/13/bits/functexcept.h:
 
 /usr/include/bits/time64.h:
 
@@ -907,27 +954,23 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/bits/thread-shared-types.h:
 
-/usr/include/features.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xtestintrin.h:
 
-/usr/include/bits/types/__FILE.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/tbmintrin.h:
+/usr/include/bits/struct_mutex.h:
 
 /usr/include/bits/types/struct_timeval.h:
 
 /usr/include/c++/13/bits/concept_check.h:
 
+/usr/lib/gcc/x86_64-redhat-linux/13/include/uintrintrin.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/c++/13/bits/alloc_traits.h:
+
 /usr/include/bits/types/cookie_io_functions_t.h:
 
 /usr/include/bits/stdint-uintn.h:
-
-/usr/include/c++/13/cstdlib:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/movdirintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/amxtileintrin.h:
-
-/usr/include/c++/13/backward/binders.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqvlintrin.h:
 
@@ -947,15 +990,15 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/bits/math-vector.h:
 
-/usr/include/c++/13/bits/stl_function.h:
-
-/usr/include/bits/libm-simd-decl-stubs.h:
+/usr/include/c++/13/bits/predefined_ops.h:
 
 /usr/include/bits/libc-header-start.h:
 
 /usr/include/bits/iscanonical.h:
 
 /usr/include/bits/fp-logb.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/amxfp16intrin.h:
 
@@ -964,10 +1007,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/c++/13/bits/ptr_traits.h:
 
 /usr/include/bits/types/FILE.h:
-
-/usr/include/c++/13/stdlib.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/bmi2intrin.h:
 
 /usr/include/bits/floatn.h:
 
@@ -978,16 +1017,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/SDL2/SDL_messagebox.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
-
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/SDL2/SDL_stdinc.h:
-
-/usr/include/c++/13/bits/move.h:
-
-/usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h:
-
-/usr/include/SDL2/SDL_joystick.h:
 
 /usr/include/bits/types.h:
 
@@ -1007,10 +1036,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/SDL2/SDL_locale.h:
 
-/usr/include/c++/13/ext/type_traits.h:
-
-/usr/include/SDL2/SDL_rect.h:
-
 /usr/include/time.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqintrin.h:
@@ -1025,43 +1050,37 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/SDL2/SDL_hints.h:
 
-/usr/include/c++/13/math.h:
-
 /usr/include/SDL2/SDL_clipboard.h:
 
 /usr/include/SDL2/SDL_gamecontroller.h:
-
-/usr/include/c++/13/bits/utility.h:
-
-/usr/include/bits/atomic_wide_counter.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/gfniintrin.h:
 
 /usr/include/SDL2/SDL_config.h:
 
-/usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h:
+/usr/include/c++/13/bits/invoke.h:
 
-/usr/include/SDL2/SDL_events.h:
+/usr/include/SDL2/SDL_pixels.h:
+
+/usr/include/c++/13/bits/exception.h:
 
 /home/khaled/Documents/gameoflife/src/display.cpp:
 
-/usr/include/c++/13/bits/std_abs.h:
+/usr/include/alloca.h:
 
-/usr/include/SDL2/SDL_misc.h:
+/usr/include/SDL2/SDL_joystick.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vldqintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnniintrin.h:
+/usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h:
 
 /usr/include/SDL2/SDL_assert.h:
 
 /usr/include/stdlib.h:
 
-/usr/include/c++/13/bits/alloc_traits.h:
+/usr/include/c++/13/bits/functional_hash.h:
 
-/usr/include/bits/select.h:
+/usr/include/bits/types/time_t.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/uintrintrin.h:
+/usr/include/SDL2/SDL_endian.h:
 
 /usr/include/SDL2/SDL_main.h:
 
@@ -1069,37 +1088,37 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/bits/endian.h:
 
-/usr/include/c++/13/cmath:
-
 /usr/include/bits/fp-fast.h:
 
 /usr/include/SDL2/SDL_audio.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/ctype.h:
-
-/usr/include/SDL2/SDL_gesture.h:
 
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/SDL2/SDL_config-x86_64.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/wbnoinvdintrin.h:
-
 /usr/include/SDL2/SDL_mouse.h:
 
 /usr/include/SDL2/SDL_error.h:
 
+/usr/include/c++/13/bits/stl_vector.h:
+
 /usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
 
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/SDL2/SDL_metal.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/enqcmdintrin.h:
+/usr/include/c++/13/bits/stl_uninitialized.h:
 
-/usr/include/SDL2/SDL_mutex.h:
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/SDL2/SDL_thread.h:
+
+/usr/include/SDL2/SDL_gesture.h:
+
+/usr/include/ctype.h:
 
 /usr/include/bits/types/__sigset_t.h:
 
@@ -1117,6 +1136,12 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/keylockerintrin.h:
 
+/home/khaled/Documents/gameoflife/src/gameoflife.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmi2vlintrin.h:
+
+/usr/include/SDL2/SDL_blendmode.h:
+
 /usr/lib/gcc/x86_64-redhat-linux/13/include/f16cintrin.h:
 
 /usr/include/SDL2/SDL_render.h:
@@ -1131,11 +1156,13 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/SDL2/SDL_shape.h:
 
-/usr/include/c++/13/bits/vector.tcc:
-
-/usr/include/SDL2/SDL_rwops.h:
-
 /home/khaled/Documents/gameoflife/src/display.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/c++/13/bits/exception_defines.h:
+
+/usr/include/math.h:
 
 /usr/include/bits/pthreadtypes.h:
 
@@ -1147,27 +1174,123 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/SDL2/SDL_system.h:
 
+/usr/include/c++/13/initializer_list:
+
 /usr/include/SDL2/SDL_timer.h:
 
 /usr/include/bits/stdint-intn.h:
 
 /usr/include/bits/types/clockid_t.h:
 
-/usr/include/bits/uintn-identity.h:
-
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmi2intrin.h:
+
+/usr/include/bits/uintn-identity.h:
 
 /usr/include/SDL2/begin_code.h:
 
 /usr/include/SDL2/SDL_version.h:
 
+/usr/include/bits/endianness.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/features.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/bmiintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/popcntintrin.h:
+
+/usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/SDL2/SDL_misc.h:
+
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/c++/13/bits/stl_algobase.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xmmintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/mwaitxintrin.h:
+
+/usr/include/c++/13/bits/stl_construct.h:
+
+/usr/include/bits/libm-simd-decl-stubs.h:
+
+/usr/include/c++/13/bits/stl_function.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/c++/13/bits/utility.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/shaintrin.h:
+
+/usr/include/c++/13/bits/stl_pair.h:
+
+/usr/include/SDL2/SDL_rwops.h:
+
+/usr/include/c++/13/bits/vector.tcc:
+
+/usr/include/c++/13/cmath:
+
+/usr/include/c++/13/cstdlib:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/movdirintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/amxtileintrin.h:
+
+/usr/include/c++/13/debug/assertions.h:
+
+/usr/include/c++/13/debug/debug.h:
+
 /usr/include/gnu/stubs-64.h:
 
-/usr/include/math.h:
+/usr/include/c++/13/ext/alloc_traits.h:
 
-/usr/include/bits/long-double.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/waitpkgintrin.h:
 
-/usr/include/c++/13/bits/exception_defines.h:
+/usr/include/c++/13/new:
+
+/usr/include/inttypes.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnniintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vldqintrin.h:
+
+/usr/include/c++/13/bits/stl_iterator.h:
+
+/usr/include/c++/13/ext/numeric_traits.h:
+
+/usr/include/SDL2/SDL_rect.h:
+
+/usr/include/c++/13/ext/type_traits.h:
+
+/usr/include/c++/13/math.h:
+
+/usr/include/c++/13/stdlib.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/bmi2intrin.h:
+
+/usr/include/c++/13/type_traits:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/cmpccxaddintrin.h:
+
+/usr/include/c++/13/vector:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avxneconvertintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/lwpintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/pmmintrin.h:
+
+/usr/include/SDL2/SDL_events.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/c++allocator.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/cpu_defines.h:
+
+/usr/include/c++/13/x86_64-redhat-linux/bits/os_defines.h:
+
+/usr/include/features-time64.h:
 
 /usr/include/stdc-predef.h:
 
@@ -1175,9 +1298,9 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/stdint.h:
 
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
-
 /usr/include/bits/wordsize.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/stdio.h:
 
@@ -1188,10 +1311,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/strings.h:
 
 /usr/include/sys/cdefs.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/clflushoptintrin.h:
-
-/usr/include/c++/13/bits/allocator.h:
 
 /usr/include/sys/types.h:
 
@@ -1206,8 +1325,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/sys/select.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/amxint8intrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/vpclmulqdqintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx5124fmapsintrin.h:
 
@@ -1235,25 +1352,13 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512fp16vlintrin.h:
 
-/usr/include/SDL2/SDL_blendmode.h:
-
-/home/khaled/Documents/gameoflife/src/gameoflife.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmi2vlintrin.h:
-
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vbmivlintrin.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/wmmintrin.h:
-
-/usr/include/c++/13/bits/stl_uninitialized.h:
-
-/usr/include/SDL2/SDL_thread.h:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vp2intersectvlintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveoptintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avxifmaintrin.h:
 
 /usr/include/bits/types/locale_t.h:
 
@@ -1263,12 +1368,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/smmintrin.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avxneconvertintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/lwpintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/pmmintrin.h:
-
 /usr/lib/gcc/x86_64-redhat-linux/13/include/cldemoteintrin.h:
 
 /usr/include/SDL2/SDL_surface.h:
@@ -1276,10 +1375,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/lib/gcc/x86_64-redhat-linux/13/include/clwbintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/clzerointrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/xsavecintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/cmpccxaddintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/emmintrin.h:
 
@@ -1289,9 +1384,9 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/hresetintrin.h:
 
-/usr/include/c++/13/bits/refwrap.h:
-
 /usr/lib/gcc/x86_64-redhat-linux/13/include/cetintrin.h:
+
+/usr/include/c++/13/bits/refwrap.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/ia32intrin.h:
 
@@ -1309,60 +1404,4 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/serializeintrin.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/shaintrin.h:
-
 /usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/stdint.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/tsxldtrkintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/vaesintrin.h:
-
-/usr/include/c++/13/new:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/waitpkgintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/x86gprintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/mwaitxintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/xmmintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avxifmaintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/xsaveoptintrin.h:
-
-/usr/include/bits/struct_mutex.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/xtestintrin.h:
-
-/home/khaled/Documents/gameoflife/src/gameoflife.cpp:
-
-/usr/include/c++/13/bits/hash_bytes.h:
-
-/usr/include/bits/timex.h:
-
-/usr/include/bits/types/struct_tm.h:
-
-/usr/include/c++/13/bit:
-
-/usr/include/c++/13/bits/exception.h:
-
-/usr/include/bits/types/time_t.h:
-
-/usr/include/SDL2/SDL_endian.h:
-
-/usr/include/c++/13/bits/functional_hash.h:
-
-/usr/include/SDL2/SDL_pixels.h:
-
-/usr/include/c++/13/bits/invoke.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h:
-
-/usr/include/c++/13/bits/memoryfwd.h:

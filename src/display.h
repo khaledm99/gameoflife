@@ -1,5 +1,6 @@
 #pragma once
 #include <SDL2/SDL.h>
+#include <vector>
 
 class Display
 {
@@ -15,6 +16,8 @@ class Display
         ~Display();
 
         void clear();
+        void draw(std::vector<std::vector<int>> &grd);
+        void drawPoint(int x, int y);
 
         SDL_Event* getEvent();
         SDL_Window* getWindow();

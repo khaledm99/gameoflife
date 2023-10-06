@@ -50,6 +50,47 @@ void Display::clear()
     if(checkError!=0) throw(SDL_GetError());
 }
 
+// Draw current teration
+void Display::drawPoint(int x, int y)
+{
+    int checkError = 0;
+    checkError+=SDL_SetRenderTarget(renderer, texture);
+    checkError+=SDL_SetRenderDrawColor(renderer,255,255,255,255);   // White foreground
+    checkError+=SDL_RenderDrawPoint(renderer,x,y);
+    checkError+=SDL_RenderDrawPoint(renderer,win.w/2,win.h/2);
+    if(checkError!=0) throw(SDL_GetError());
+}
+void Display::draw(std::vector<std::vector<int>> &grid)
+{
+    int checkError = 0;
+    try
+    {
+        clear();
+    } catch (const char* s){
+        throw(s);
+    }
+
+    // Draw the world. If world cell is 0, draw nothing, if 1, draw a white pixel
+    for(int i=0; i<grid.size(); i++)
+    {
+        for(int j=0; j<grid[0].size(); j++)
+        {
+            if(grid[i][j]==1) drawPoint(j,i);
+        }
+    }
+
+    // Green point at center of screen
+    //checkError+=SDL_SetRenderDrawColor(renderer,0,255,0,255);
+    //checkError+=SDL_RenderDrawPoint(renderer,win.w/2,win.h/2);
+    
+    // Draw newly computed texture to window
+    checkError+=SDL_SetRenderTarget(renderer, NULL);
+    checkError+=SDL_RenderCopy(renderer,texture,&view,&win);
+    SDL_RenderPresent(renderer);
+    
+    if(checkError!=0) throw(SDL_GetError());
+}
+
 SDL_Window* Display::getWindow()
 {
     return window;

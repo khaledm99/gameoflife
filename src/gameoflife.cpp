@@ -49,49 +49,19 @@ GameOfLife::~GameOfLife()
 
 
 
-
-
-// Draw current teration
 int GameOfLife::draw()
 {
-    int checkError = 0;
-    try
-    {
-        display->clear();
-    } catch (const char* &s){
-        throw(s);
-    }
-
-    checkError+=SDL_SetRenderTarget(display->getRenderer(), display->getTexture());
-    checkError+=SDL_SetRenderDrawColor(display->getRenderer(),255,255,255,255);   // White foreground
-
-    // Draw the world. If world cell is 0, draw nothing, if 1, draw a white pixel
-    for(int i=0; i<height; i++)
-    {
-        for(int j=0; j<width; j++)
-        {
-            if(world[i][j]==1) checkError+=SDL_RenderDrawPoint(display->getRenderer(),j,i);
-        }
-    }
-
-    // Green point at center of screen
-    checkError+=SDL_SetRenderDrawColor(display->getRenderer(),0,255,0,255);
-    checkError+=SDL_RenderDrawPoint(display->getRenderer(),width/2,height/2);
-
+    display->draw(world); 
     // When paused, draw a grey cell wherever the mouse pointer is located
     if(paused)
     {
         drawCursor();
     }
-    
-    // Draw newly computed texture to window
-    checkError+=SDL_SetRenderTarget(display->getRenderer(), NULL);
-    checkError+=SDL_RenderCopy(display->getRenderer(),display->getTexture(),display->getView(),display->getWin());
-    SDL_RenderPresent(display->getRenderer());
-    
-    if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
+
+
+
 
 int GameOfLife::drawCursor()
 {
