@@ -45,6 +45,7 @@ add_executable(
 )
 target_link_libraries(gol_test
     ${SDL2_LIBRARIES}
+    GTest::gmock_main
     GTest::gtest_main
 )
 

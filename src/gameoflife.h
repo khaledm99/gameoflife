@@ -3,6 +3,7 @@
 
 #include <SDL2/SDL.h>
 #include <vector>
+#include "displayInterface.h"
 #include "display.h"
 
 class Display;
@@ -23,7 +24,7 @@ class GameOfLife {
         int wwidth =1280;
         bool paused = false;   
 
-        Display* display = nullptr;
+        DisplayInterface* display = nullptr;
         
         std::vector<std::vector<int>> world;    // 2D grid of cells
         std::vector<std::vector<int>> temp;     // Temporary grid for updating world
@@ -38,8 +39,8 @@ class GameOfLife {
         std::vector<std::vector<int>> getWorld();
         void setWorld(std::vector<std::vector<int>> arr);
 
-        void setDisplay(Display* d);
-        Display* getDisplay();
+        void setDisplay(DisplayInterface* d);
+        DisplayInterface* getDisplay();
         
         GameOfLife(int w, int h);               // Constructor
         ~GameOfLife();

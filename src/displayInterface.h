@@ -7,6 +7,7 @@ class Input;
 class DisplayInterface
 {
     public:
+        virtual ~DisplayInterface() {}
         virtual void clear(){}
         virtual void draw(std::vector<std::vector<int>> &grid){}
         virtual void drawPoint(int x, int y){}

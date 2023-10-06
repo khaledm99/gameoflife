@@ -221,24 +221,49 @@ CMakeFiles/gol_test.dir/src/test.cpp.o: \
  /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h \
  /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h \
  /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/include/gtest/gtest_prod.h \
- /home/khaled/Documents/gameoflife/src/gameoflife.h \
- /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
- /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
- /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
- /usr/include/SDL2/begin_code.h /usr/include/SDL2/close_code.h \
- /usr/include/inttypes.h /usr/include/c++/13/math.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-actions.h \
+ /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
+ /usr/include/c++/13/bits/algorithmfwd.h \
+ /usr/include/c++/13/bits/stl_heap.h \
+ /usr/include/c++/13/bits/uniform_int_dist.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/internal/gmock-internal-utils.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/internal/gmock-port.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/internal/custom/gmock-port.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/internal/gmock-pp.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-cardinalities.h \
+ /usr/lib/gcc/x86_64-redhat-linux/13/include/limits.h \
+ /usr/lib/gcc/x86_64-redhat-linux/13/include/syslimits.h \
+ /usr/include/limits.h /usr/include/bits/posix1_lim.h \
+ /usr/include/bits/local_lim.h /usr/include/linux/limits.h \
+ /usr/include/bits/posix2_lim.h /usr/include/bits/xopen_lim.h \
+ /usr/include/bits/uio_lim.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-function-mocker.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-spec-builders.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-matchers.h \
  /usr/include/c++/13/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
  /usr/include/bits/fp-fast.h \
  /usr/include/bits/mathcalls-helper-functions.h \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
- /usr/include/bits/iscanonical.h /usr/include/SDL2/SDL_assert.h \
- /usr/include/SDL2/SDL_atomic.h /usr/include/SDL2/SDL_audio.h \
- /usr/include/SDL2/SDL_error.h /usr/include/SDL2/SDL_endian.h \
- /usr/include/SDL2/SDL_mutex.h /usr/include/SDL2/SDL_thread.h \
- /usr/include/SDL2/SDL_rwops.h /usr/include/SDL2/SDL_clipboard.h \
- /usr/include/SDL2/SDL_cpuinfo.h \
+ /usr/include/bits/iscanonical.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/internal/custom/gmock-matchers.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-more-actions.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/internal/custom/gmock-generated-actions.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-more-matchers.h \
+ /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include/gmock/gmock-nice-strict.h \
+ /home/khaled/Documents/gameoflife/src/gameoflife.h \
+ /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
+ /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
+ /usr/include/SDL2/SDL_config-x86_64.h /usr/include/SDL2/SDL_platform.h \
+ /usr/include/SDL2/begin_code.h /usr/include/SDL2/close_code.h \
+ /usr/include/inttypes.h /usr/include/c++/13/math.h \
+ /usr/include/SDL2/SDL_assert.h /usr/include/SDL2/SDL_atomic.h \
+ /usr/include/SDL2/SDL_audio.h /usr/include/SDL2/SDL_error.h \
+ /usr/include/SDL2/SDL_endian.h /usr/include/SDL2/SDL_mutex.h \
+ /usr/include/SDL2/SDL_thread.h /usr/include/SDL2/SDL_rwops.h \
+ /usr/include/SDL2/SDL_clipboard.h /usr/include/SDL2/SDL_cpuinfo.h \
  /usr/lib/gcc/x86_64-redhat-linux/13/include/immintrin.h \
  /usr/lib/gcc/x86_64-redhat-linux/13/include/x86gprintrin.h \
  /usr/lib/gcc/x86_64-redhat-linux/13/include/ia32intrin.h \
@@ -350,7 +375,7 @@ CMakeFiles/gol_test.dir/src/test.cpp.o: \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
  /usr/include/SDL2/SDL_misc.h \
- /home/khaled/Documents/gameoflife/src/display.h \
- /home/khaled/Documents/gameoflife/src/input.h \
  /home/khaled/Documents/gameoflife/src/displayInterface.h \
+ /home/khaled/Documents/gameoflife/src/input.h \
+ /home/khaled/Documents/gameoflife/src/display.h \
  /home/khaled/Documents/gameoflife/src/util.h

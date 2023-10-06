@@ -8,6 +8,7 @@ class Input
         GameOfLife* g = nullptr;
 
     public:
+        virtual ~Input(){}
         void setGamePtr(GameOfLife* game);
         GameOfLife* getGamePtr();
         virtual void doAction(){} 

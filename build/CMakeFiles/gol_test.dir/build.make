@@ -142,7 +142,9 @@ gol_test: CMakeFiles/gol_test.dir/src/test.cpp.o
 gol_test: CMakeFiles/gol_test.dir/build.make
 gol_test: /usr/lib64/libSDL2main.a
 gol_test: /usr/lib64/libSDL2-2.0.so.0.2600.3
+gol_test: lib/libgmock_main.a
 gol_test: lib/libgtest_main.a
+gol_test: lib/libgmock.a
 gol_test: lib/libgtest.a
 gol_test: CMakeFiles/gol_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/khaled/Documents/gameoflife/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable gol_test"

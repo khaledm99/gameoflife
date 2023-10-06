@@ -1,7 +1,21 @@
 #include "gtest/gtest.h"
+#include "gmock/gmock.h"
 #include "gameoflife.h"
 #include "util.h"
 #include "input.h"
+#include "displayInterface.h"
+
+
+class MockDisplay : public DisplayInterface
+{
+    public:
+        MOCK_METHOD(void, clear, (), (override));
+        MOCK_METHOD(void, draw, (std::vector<std::vector<int>> &grid), (override));
+        MOCK_METHOD(void, drawPoint, (int x, int y), (override));
+        MOCK_METHOD(void, drawCursor, (), (override));
+        MOCK_METHOD(void, dWait, (int delay), (override));
+        MOCK_METHOD(Input*, getInput, (), (override));
+};
 
 TEST(ModTest, NonNegativeValues)
 {

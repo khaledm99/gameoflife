@@ -29,11 +29,11 @@ GameOfLife::GameOfLife(int w, int h)
     //display = new Display(1280,720,width,height);
 } 
 
-void GameOfLife::setDisplay(Display* d)
+void GameOfLife::setDisplay(DisplayInterface* d)
 {
     display = d;
 }
-Display* GameOfLife::getDisplay()
+DisplayInterface* GameOfLife::getDisplay()
 {
     return display;
 }

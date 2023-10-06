@@ -159,6 +159,8 @@ CMakeFiles/GameOfLife.dir/clean:
 # Target rules for target CMakeFiles/gol_test.dir
 
 # All Build rule for target.
+CMakeFiles/gol_test.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/all
+CMakeFiles/gol_test.dir/all: _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/all
 CMakeFiles/gol_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/gol_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gol_test.dir/build.make CMakeFiles/gol_test.dir/depend
@@ -168,7 +170,7 @@ CMakeFiles/gol_test.dir/all: _deps/googletest-build/googletest/CMakeFiles/gtest_
 
 # Build rule for subdir invocation for target.
 CMakeFiles/gol_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/khaled/Documents/gameoflife/build/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/khaled/Documents/gameoflife/build/CMakeFiles 13
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gol_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/khaled/Documents/gameoflife/build/CMakeFiles 0
 .PHONY : CMakeFiles/gol_test.dir/rule

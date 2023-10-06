@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /usr/include/SDL2 -isystem /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/include -isystem /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest
+CXX_INCLUDES = -isystem /usr/include/SDL2 -isystem /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock/include -isystem /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googlemock -isystem /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/include -isystem /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest
 
 CXX_FLAGS = -std=gnu++14
 
