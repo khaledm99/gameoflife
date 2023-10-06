@@ -166,6 +166,11 @@ SDL_Event* Display::getEvent()
     return &e;
 }
 
+void Display::dWait(int delay)
+{
+    SDL_Delay(delay);
+}
+
 // Handle input using SDl
 Input* Display::getInput()
 {    

@@ -20,6 +20,7 @@ add_executable(${PROJECT_NAME}
    src/util.h
    src/input.h
    src/input.cpp
+   src/displayInterface.h
    src/display.h
    src/display.cpp
    src/gameoflife.h
@@ -35,6 +36,7 @@ add_executable(
     src/util.h
     src/input.h
     src/input.cpp
+   src/displayInterface.h
     src/display.h
     src/display.cpp
     src/gameoflife.h

@@ -169,4 +169,7 @@ void GameOfLife::setPaused(bool p)
     paused = p;
 }
 
-
+void GameOfLife::delay()
+{
+    display->dWait(speed);
+}

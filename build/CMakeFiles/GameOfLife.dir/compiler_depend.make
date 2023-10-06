@@ -3,6 +3,7 @@
 
 CMakeFiles/GameOfLife.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/src/display.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /home/khaled/Documents/gameoflife/src/util.h \
@@ -282,6 +283,7 @@ CMakeFiles/GameOfLife.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/s
 
 CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.o: /home/khaled/Documents/gameoflife/src/gameoflife.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /home/khaled/Documents/gameoflife/src/util.h \
@@ -566,6 +568,7 @@ CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.o: /home/khaled/Documents/gameoflif
 
 CMakeFiles/GameOfLife.dir/src/input.cpp.o: /home/khaled/Documents/gameoflife/src/input.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /usr/include/SDL2/SDL.h \
@@ -844,6 +847,7 @@ CMakeFiles/GameOfLife.dir/src/input.cpp.o: /home/khaled/Documents/gameoflife/src
 
 CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/main.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /usr/include/SDL2/SDL.h \
@@ -1305,10 +1309,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/bits/endian.h:
 
-/usr/include/SDL2/SDL_messagebox.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
-
 /usr/include/bits/types.h:
 
 /usr/include/bits/types/struct_timespec.h:
@@ -1325,16 +1325,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/SDL2/SDL_haptic.h:
 
-/usr/include/SDL2/SDL_locale.h:
-
-/usr/include/time.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqintrin.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/include/SDL2/SDL_guid.h:
-
 /usr/include/SDL2/SDL_sensor.h:
 
 /usr/include/SDL2/SDL_keyboard.h:
@@ -1344,10 +1334,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/SDL2/SDL_clipboard.h:
 
 /usr/include/SDL2/SDL_gamecontroller.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/gfniintrin.h:
-
-/usr/include/SDL2/SDL_config.h:
 
 /usr/include/c++/13/bits/invoke.h:
 
@@ -1363,9 +1349,15 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /home/khaled/Documents/gameoflife/src/input.h:
 
-/usr/include/SDL2/SDL_assert.h:
+/usr/include/bits/floatn-common.h:
 
-/usr/include/stdlib.h:
+/usr/include/SDL2/SDL_guid.h:
+
+/home/khaled/Documents/gameoflife/src/displayInterface.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/SDL2/SDL_config-x86_64.h:
 
 /usr/include/c++/13/bits/exception.h:
 
@@ -1377,13 +1369,27 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h:
 
+/usr/include/SDL2/SDL_assert.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/time.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqintrin.h:
+
 /usr/include/bits/fp-fast.h:
 
 /usr/include/SDL2/SDL_audio.h:
 
-/usr/include/bits/mathcalls-helper-functions.h:
+/usr/include/SDL2/SDL_locale.h:
 
-/usr/include/SDL2/SDL_config-x86_64.h:
+/usr/include/SDL2/SDL_messagebox.h:
+
+/usr/include/SDL2/SDL_config.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/gfniintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
 
 /usr/include/SDL2/SDL_log.h:
 
@@ -1399,17 +1405,9 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/prfchiintrin.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
-
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/SDL2/SDL_metal.h:
-
-/usr/include/c++/13/bits/stl_uninitialized.h:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
-/usr/include/SDL2/SDL_thread.h:
 
 /usr/include/SDL2/SDL_gesture.h:
 
@@ -1478,6 +1476,14 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/SDL2/begin_code.h:
 
 /usr/include/SDL2/SDL_version.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
+/usr/include/SDL2/SDL_thread.h:
+
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
 
 /usr/include/bits/types/FILE.h:
 

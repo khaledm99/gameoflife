@@ -2,9 +2,10 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include "input.h"
+#include "displayInterface.h"
 class Input;
 
-class Display
+class Display : public DisplayInterface
 {
     private:
         SDL_Event e;
@@ -17,12 +18,13 @@ class Display
         Display(int windowWidth, int windowHeight, int gridWidth, int gridHeight);
         ~Display();
 
-        void clear();
-        void draw(std::vector<std::vector<int>> &grd);
-        void drawPoint(int x, int y);
-        void drawCursor();
+        void clear() override;
+        void draw(std::vector<std::vector<int>> &grid) override;
+        void drawPoint(int x, int y) override;
+        void drawCursor() override;
+        void dWait(int delay) override;
 
-        Input* getInput();
+        Input* getInput() override;
 
         SDL_Event* getEvent();
         SDL_Window* getWindow();

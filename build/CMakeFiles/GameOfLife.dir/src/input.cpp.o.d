@@ -206,4 +206,5 @@ CMakeFiles/GameOfLife.dir/src/input.cpp.o: \
  /usr/include/c++/13/backward/binders.h \
  /usr/include/c++/13/bits/range_access.h \
  /usr/include/c++/13/bits/vector.tcc \
- /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/display.h \
+ /home/khaled/Documents/gameoflife/src/displayInterface.h

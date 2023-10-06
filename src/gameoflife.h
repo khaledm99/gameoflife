@@ -53,6 +53,7 @@ class GameOfLife {
         int draw();                             // Draws current iteration of world
         int next();                             // Computes next iteration
         void getInput();                         // Handles keyboard input
+        void delay();
 
 
 };

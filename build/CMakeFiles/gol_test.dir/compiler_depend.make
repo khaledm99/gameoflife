@@ -3,6 +3,7 @@
 
 CMakeFiles/gol_test.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/src/display.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /home/khaled/Documents/gameoflife/src/util.h \
@@ -282,6 +283,7 @@ CMakeFiles/gol_test.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/src
 
 CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: /home/khaled/Documents/gameoflife/src/gameoflife.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /home/khaled/Documents/gameoflife/src/util.h \
@@ -566,6 +568,7 @@ CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: /home/khaled/Documents/gameoflife/
 
 CMakeFiles/gol_test.dir/src/input.cpp.o: /home/khaled/Documents/gameoflife/src/input.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /usr/include/SDL2/SDL.h \
@@ -865,6 +868,7 @@ CMakeFiles/gol_test.dir/src/test.cpp.o: /home/khaled/Documents/gameoflife/src/te
   _deps/googletest-src/googletest/include/gtest/internal/gtest-string.h \
   _deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/displayInterface.h \
   /home/khaled/Documents/gameoflife/src/gameoflife.h \
   /home/khaled/Documents/gameoflife/src/input.h \
   /home/khaled/Documents/gameoflife/src/util.h \
@@ -1823,10 +1827,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/bits/endian.h:
 
-/usr/include/SDL2/SDL_messagebox.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
-
 /usr/include/bits/types.h:
 
 /usr/include/bits/types/struct_timespec.h:
@@ -1847,16 +1847,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/SDL2/SDL_haptic.h:
 
-/usr/include/SDL2/SDL_locale.h:
-
-/usr/include/time.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqintrin.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/include/SDL2/SDL_guid.h:
-
 /usr/include/c++/13/bits/stl_multiset.h:
 
 /usr/include/SDL2/SDL_sensor.h:
@@ -1870,10 +1860,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 /usr/include/SDL2/SDL_clipboard.h:
 
 /usr/include/SDL2/SDL_gamecontroller.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/gfniintrin.h:
-
-/usr/include/SDL2/SDL_config.h:
 
 /usr/include/bits/types/struct_sched_param.h:
 
@@ -1899,9 +1885,15 @@ _deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
 
 /home/khaled/Documents/gameoflife/src/input.h:
 
-/usr/include/SDL2/SDL_assert.h:
+/usr/include/bits/floatn-common.h:
 
-/usr/include/stdlib.h:
+/usr/include/SDL2/SDL_guid.h:
+
+/home/khaled/Documents/gameoflife/src/displayInterface.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/SDL2/SDL_config-x86_64.h:
 
 /usr/include/c++/13/bits/exception.h:
 
@@ -1915,6 +1907,14 @@ _deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
 
 /usr/include/c++/13/x86_64-redhat-linux/bits/c++config.h:
 
+/usr/include/SDL2/SDL_assert.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/time.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vpopcntdqintrin.h:
+
 /usr/include/wctype.h:
 
 /usr/include/sched.h:
@@ -1923,9 +1923,15 @@ _deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
 
 /usr/include/SDL2/SDL_audio.h:
 
-/usr/include/bits/mathcalls-helper-functions.h:
+/usr/include/SDL2/SDL_locale.h:
 
-/usr/include/SDL2/SDL_config-x86_64.h:
+/usr/include/SDL2/SDL_messagebox.h:
+
+/usr/include/SDL2/SDL_config.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/gfniintrin.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/pkuintrin.h:
 
 /usr/include/SDL2/SDL_log.h:
 
@@ -1943,17 +1949,9 @@ _deps/googletest-src/googletest/include/gtest/gtest-death-test.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/prfchiintrin.h:
 
-/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
-
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/SDL2/SDL_metal.h:
-
-/usr/include/c++/13/bits/stl_uninitialized.h:
-
-/usr/include/c++/13/bits/new_allocator.h:
-
-/usr/include/SDL2/SDL_thread.h:
 
 /usr/include/SDL2/SDL_gesture.h:
 
@@ -2038,6 +2036,14 @@ _deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
 /usr/include/SDL2/begin_code.h:
 
 /usr/include/SDL2/SDL_version.h:
+
+/usr/include/c++/13/bits/stl_uninitialized.h:
+
+/usr/include/SDL2/SDL_thread.h:
+
+/usr/include/c++/13/bits/new_allocator.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
 
 /usr/include/linux/posix_types.h:
 

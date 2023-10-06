@@ -29,7 +29,7 @@ int main()
             g.draw();
             g.getInput();
         }
-        SDL_Delay(g.getSpeed());
+        g.delay();
     }
     return 0;
 }

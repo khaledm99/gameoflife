@@ -4,6 +4,7 @@
 CMakeFiles/gol_test.dir/src/display.cpp.o
  /home/khaled/Documents/gameoflife/src/display.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /home/khaled/Documents/gameoflife/src/util.h
@@ -284,6 +285,7 @@ CMakeFiles/gol_test.dir/src/display.cpp.o
 CMakeFiles/gol_test.dir/src/gameoflife.cpp.o
  /home/khaled/Documents/gameoflife/src/gameoflife.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /home/khaled/Documents/gameoflife/src/util.h
@@ -569,6 +571,7 @@ CMakeFiles/gol_test.dir/src/gameoflife.cpp.o
 CMakeFiles/gol_test.dir/src/input.cpp.o
  /home/khaled/Documents/gameoflife/src/input.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /usr/include/SDL2/SDL.h
@@ -869,6 +872,7 @@ CMakeFiles/gol_test.dir/src/test.cpp.o
  /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h
  /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /home/khaled/Documents/gameoflife/src/util.h

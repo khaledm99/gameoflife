@@ -208,6 +208,7 @@ CMakeFiles/gol_test.dir/src/gameoflife.cpp.o: \
  /home/khaled/Documents/gameoflife/src/gameoflife.h \
  /home/khaled/Documents/gameoflife/src/display.h \
  /home/khaled/Documents/gameoflife/src/input.h \
+ /home/khaled/Documents/gameoflife/src/displayInterface.h \
  /home/khaled/Documents/gameoflife/src/util.h /usr/include/time.h \
  /usr/include/bits/time.h /usr/include/bits/timex.h \
  /usr/include/bits/types/struct_tm.h \

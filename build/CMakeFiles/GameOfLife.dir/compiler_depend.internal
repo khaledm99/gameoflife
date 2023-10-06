@@ -4,6 +4,7 @@
 CMakeFiles/GameOfLife.dir/src/display.cpp.o
  /home/khaled/Documents/gameoflife/src/display.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /home/khaled/Documents/gameoflife/src/util.h
@@ -284,6 +285,7 @@ CMakeFiles/GameOfLife.dir/src/display.cpp.o
 CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.o
  /home/khaled/Documents/gameoflife/src/gameoflife.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /home/khaled/Documents/gameoflife/src/util.h
@@ -569,6 +571,7 @@ CMakeFiles/GameOfLife.dir/src/gameoflife.cpp.o
 CMakeFiles/GameOfLife.dir/src/input.cpp.o
  /home/khaled/Documents/gameoflife/src/input.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /usr/include/SDL2/SDL.h
@@ -848,6 +851,7 @@ CMakeFiles/GameOfLife.dir/src/input.cpp.o
 CMakeFiles/GameOfLife.dir/src/main.cpp.o
  /home/khaled/Documents/gameoflife/src/main.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/displayInterface.h
  /home/khaled/Documents/gameoflife/src/gameoflife.h
  /home/khaled/Documents/gameoflife/src/input.h
  /usr/include/SDL2/SDL.h
