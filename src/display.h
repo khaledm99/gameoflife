@@ -20,6 +20,8 @@ class Display
         void drawPoint(int x, int y);
         void drawCursor();
 
+        void getInput();
+
         SDL_Event* getEvent();
         SDL_Window* getWindow();
         void setWindow(SDL_Window* win);
