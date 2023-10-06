@@ -49,20 +49,7 @@ GameOfLife::~GameOfLife()
 
 
 
-// Clear screen
-// Default black background
-int GameOfLife::clear()
-{
-    int checkError = 0;
-    checkError += SDL_SetRenderTarget(display->getRenderer(), display->getTexture());
-    checkError += SDL_SetRenderDrawColor(display->getRenderer(),0,0,0,255);
-    checkError += SDL_RenderClear(display->getRenderer());
-    checkError += SDL_SetRenderTarget(display->getRenderer(), NULL);
 
-    checkError += SDL_RenderCopy(display->getRenderer(),display->getTexture(),display->getView(),display->getWin());
-    if(checkError!=0) throw(SDL_GetError());
-    return 0;
-}
 
 // Draw current teration
 int GameOfLife::draw()
@@ -70,7 +57,7 @@ int GameOfLife::draw()
     int checkError = 0;
     try
     {
-        clear();
+        display->clear();
     } catch (const char* &s){
         throw(s);
     }

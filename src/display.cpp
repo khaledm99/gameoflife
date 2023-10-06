@@ -36,6 +36,19 @@ Display::~Display()
     SDL_Quit();
 }
 
+// Clear screen
+// Default black background
+void Display::clear()
+{
+    int checkError = 0;
+    checkError += SDL_SetRenderTarget(renderer, texture);
+    checkError += SDL_SetRenderDrawColor(renderer,0,0,0,255);
+    checkError += SDL_RenderClear(renderer);
+    checkError += SDL_SetRenderTarget(renderer, NULL);
+
+    checkError += SDL_RenderCopy(renderer,texture,&view,&win);
+    if(checkError!=0) throw(SDL_GetError());
+}
 
 SDL_Window* Display::getWindow()
 {

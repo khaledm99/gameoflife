@@ -1,10 +1,10 @@
-Start testing: Oct 05 22:44 MDT
+Start testing: Oct 05 22:56 MDT
 ----------------------------------------------------------
 1/15 Testing: ModTest.NonNegativeValues
 1/15 Test: ModTest.NonNegativeValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NonNegativeValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"ModTest.NonNegativeValues" start time: Oct 05 22:44 MDT
+"ModTest.NonNegativeValues" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -20,10 +20,10 @@ Note: Google Test filter = ModTest.NonNegativeValues
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ModTest.NonNegativeValues" end time: Oct 05 22:44 MDT
+"ModTest.NonNegativeValues" end time: Oct 05 22:56 MDT
 "ModTest.NonNegativeValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/15 Test: ModTest.NegativeValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NegativeValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"ModTest.NegativeValues" start time: Oct 05 22:44 MDT
+"ModTest.NegativeValues" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -47,10 +47,10 @@ Note: Google Test filter = ModTest.NegativeValues
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ModTest.NegativeValues" end time: Oct 05 22:44 MDT
+"ModTest.NegativeValues" end time: Oct 05 22:56 MDT
 "ModTest.NegativeValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 3/15 Test: RoundTest.ZeroValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.ZeroValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"RoundTest.ZeroValues" start time: Oct 05 22:44 MDT
+"RoundTest.ZeroValues" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -77,7 +77,7 @@ Note: Google Test filter = RoundTest.ZeroValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"RoundTest.ZeroValues" end time: Oct 05 22:44 MDT
+"RoundTest.ZeroValues" end time: Oct 05 22:56 MDT
 "RoundTest.ZeroValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,7 +85,7 @@ Test Passed.
 4/15 Test: RoundTest.NonZeroValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.NonZeroValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"RoundTest.NonZeroValues" start time: Oct 05 22:44 MDT
+"RoundTest.NonZeroValues" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -104,7 +104,7 @@ Note: Google Test filter = RoundTest.NonZeroValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"RoundTest.NonZeroValues" end time: Oct 05 22:44 MDT
+"RoundTest.NonZeroValues" end time: Oct 05 22:56 MDT
 "RoundTest.NonZeroValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,7 +112,7 @@ Test Passed.
 5/15 Test: GOLConstructorTest.NonPosVals
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=GOLConstructorTest.NonPosVals" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"GOLConstructorTest.NonPosVals" start time: Oct 05 22:44 MDT
+"GOLConstructorTest.NonPosVals" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -128,10 +128,10 @@ Note: Google Test filter = GOLConstructorTest.NonPosVals
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"GOLConstructorTest.NonPosVals" end time: Oct 05 22:44 MDT
+"GOLConstructorTest.NonPosVals" end time: Oct 05 22:56 MDT
 "GOLConstructorTest.NonPosVals" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -139,7 +139,7 @@ Test Passed.
 6/15 Test: GOLConstructorTest.ValidConstructor
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=GOLConstructorTest.ValidConstructor" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"GOLConstructorTest.ValidConstructor" start time: Oct 05 22:44 MDT
+"GOLConstructorTest.ValidConstructor" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -148,20 +148,20 @@ Note: Google Test filter = GOLConstructorTest.ValidConstructor
 [----------] Global test environment set-up.
 [----------] 1 test from GOLConstructorTest
 [ RUN      ] GOLConstructorTest.ValidConstructor
-warning: queue 0x223f080 destroyed while proxies still attached:
+warning: queue 0xd31310 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] GOLConstructorTest.ValidConstructor (111 ms)
-[----------] 1 test from GOLConstructorTest (111 ms total)
+[       OK ] GOLConstructorTest.ValidConstructor (156 ms)
+[----------] 1 test from GOLConstructorTest (156 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (111 ms total)
+[==========] 1 test from 1 test suite ran. (156 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.12 sec
+Test time =   0.17 sec
 ----------------------------------------------------------
 Test Passed.
-"GOLConstructorTest.ValidConstructor" end time: Oct 05 22:44 MDT
+"GOLConstructorTest.ValidConstructor" end time: Oct 05 22:56 MDT
 "GOLConstructorTest.ValidConstructor" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -169,7 +169,7 @@ Test Passed.
 7/15 Test: SpeedTest.IncreaseSpeed
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SpeedTest.IncreaseSpeed" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SpeedTest.IncreaseSpeed" start time: Oct 05 22:44 MDT
+"SpeedTest.IncreaseSpeed" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -178,20 +178,20 @@ Note: Google Test filter = SpeedTest.IncreaseSpeed
 [----------] Global test environment set-up.
 [----------] 1 test from SpeedTest
 [ RUN      ] SpeedTest.IncreaseSpeed
-warning: queue 0x72e220 destroyed while proxies still attached:
+warning: queue 0x1d49d00 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] SpeedTest.IncreaseSpeed (125 ms)
-[----------] 1 test from SpeedTest (125 ms total)
+[       OK ] SpeedTest.IncreaseSpeed (118 ms)
+[----------] 1 test from SpeedTest (118 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (125 ms total)
+[==========] 1 test from 1 test suite ran. (118 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.13 sec
 ----------------------------------------------------------
 Test Passed.
-"SpeedTest.IncreaseSpeed" end time: Oct 05 22:44 MDT
+"SpeedTest.IncreaseSpeed" end time: Oct 05 22:56 MDT
 "SpeedTest.IncreaseSpeed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -199,7 +199,7 @@ Test Passed.
 8/15 Test: SpeedTest.DecreaseSpeed
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SpeedTest.DecreaseSpeed" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SpeedTest.DecreaseSpeed" start time: Oct 05 22:44 MDT
+"SpeedTest.DecreaseSpeed" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -208,20 +208,20 @@ Note: Google Test filter = SpeedTest.DecreaseSpeed
 [----------] Global test environment set-up.
 [----------] 1 test from SpeedTest
 [ RUN      ] SpeedTest.DecreaseSpeed
-warning: queue 0xcc22b0 destroyed while proxies still attached:
+warning: queue 0xbff770 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] SpeedTest.DecreaseSpeed (128 ms)
-[----------] 1 test from SpeedTest (128 ms total)
+[       OK ] SpeedTest.DecreaseSpeed (137 ms)
+[----------] 1 test from SpeedTest (137 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (128 ms total)
+[==========] 1 test from 1 test suite ran. (137 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"SpeedTest.DecreaseSpeed" end time: Oct 05 22:44 MDT
+"SpeedTest.DecreaseSpeed" end time: Oct 05 22:56 MDT
 "SpeedTest.DecreaseSpeed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -229,7 +229,7 @@ Test Passed.
 9/15 Test: SetViewTest.InvalidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetViewTest.InvalidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetViewTest.InvalidSettings" start time: Oct 05 22:44 MDT
+"SetViewTest.InvalidSettings" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -238,20 +238,20 @@ Note: Google Test filter = SetViewTest.InvalidSettings
 [----------] Global test environment set-up.
 [----------] 1 test from SetViewTest
 [ RUN      ] SetViewTest.InvalidSettings
-warning: queue 0x9d0120 destroyed while proxies still attached:
+warning: queue 0x20d2080 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] SetViewTest.InvalidSettings (105 ms)
-[----------] 1 test from SetViewTest (105 ms total)
+[       OK ] SetViewTest.InvalidSettings (111 ms)
+[----------] 1 test from SetViewTest (111 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (105 ms total)
+[==========] 1 test from 1 test suite ran. (111 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.11 sec
+Test time =   0.12 sec
 ----------------------------------------------------------
 Test Passed.
-"SetViewTest.InvalidSettings" end time: Oct 05 22:44 MDT
+"SetViewTest.InvalidSettings" end time: Oct 05 22:56 MDT
 "SetViewTest.InvalidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -259,7 +259,7 @@ Test Passed.
 10/15 Test: SetViewTest.ValidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetViewTest.ValidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetViewTest.ValidSettings" start time: Oct 05 22:44 MDT
+"SetViewTest.ValidSettings" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -268,20 +268,20 @@ Note: Google Test filter = SetViewTest.ValidSettings
 [----------] Global test environment set-up.
 [----------] 1 test from SetViewTest
 [ RUN      ] SetViewTest.ValidSettings
-warning: queue 0x1b16030 destroyed while proxies still attached:
+warning: queue 0x92c140 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] SetViewTest.ValidSettings (107 ms)
-[----------] 1 test from SetViewTest (107 ms total)
+[       OK ] SetViewTest.ValidSettings (122 ms)
+[----------] 1 test from SetViewTest (122 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (107 ms total)
+[==========] 1 test from 1 test suite ran. (123 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.11 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"SetViewTest.ValidSettings" end time: Oct 05 22:44 MDT
+"SetViewTest.ValidSettings" end time: Oct 05 22:56 MDT
 "SetViewTest.ValidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -289,7 +289,7 @@ Test Passed.
 11/15 Test: SetWinTest.InvalidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetWinTest.InvalidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetWinTest.InvalidSettings" start time: Oct 05 22:44 MDT
+"SetWinTest.InvalidSettings" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -298,20 +298,20 @@ Note: Google Test filter = SetWinTest.InvalidSettings
 [----------] Global test environment set-up.
 [----------] 1 test from SetWinTest
 [ RUN      ] SetWinTest.InvalidSettings
-warning: queue 0x20f0070 destroyed while proxies still attached:
+warning: queue 0x24dcce0 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] SetWinTest.InvalidSettings (108 ms)
-[----------] 1 test from SetWinTest (108 ms total)
+[       OK ] SetWinTest.InvalidSettings (131 ms)
+[----------] 1 test from SetWinTest (131 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (108 ms total)
+[==========] 1 test from 1 test suite ran. (132 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.12 sec
+Test time =   0.14 sec
 ----------------------------------------------------------
 Test Passed.
-"SetWinTest.InvalidSettings" end time: Oct 05 22:44 MDT
+"SetWinTest.InvalidSettings" end time: Oct 05 22:56 MDT
 "SetWinTest.InvalidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -319,7 +319,7 @@ Test Passed.
 12/15 Test: SetWinTest.ValidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetWinTest.ValidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetWinTest.ValidSettings" start time: Oct 05 22:44 MDT
+"SetWinTest.ValidSettings" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -328,20 +328,20 @@ Note: Google Test filter = SetWinTest.ValidSettings
 [----------] Global test environment set-up.
 [----------] 1 test from SetWinTest
 [ RUN      ] SetWinTest.ValidSettings
-warning: queue 0xa66740 destroyed while proxies still attached:
+warning: queue 0x1f1aa70 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] SetWinTest.ValidSettings (108 ms)
-[----------] 1 test from SetWinTest (108 ms total)
+[       OK ] SetWinTest.ValidSettings (106 ms)
+[----------] 1 test from SetWinTest (106 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (108 ms total)
+[==========] 1 test from 1 test suite ran. (106 ms total)
 [  PASSED  ] 1 test.
 <end of output>
 Test time =   0.12 sec
 ----------------------------------------------------------
 Test Passed.
-"SetWinTest.ValidSettings" end time: Oct 05 22:44 MDT
+"SetWinTest.ValidSettings" end time: Oct 05 22:56 MDT
 "SetWinTest.ValidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -349,7 +349,7 @@ Test Passed.
 13/15 Test: NextFrameTest.LineOscillator
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=NextFrameTest.LineOscillator" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"NextFrameTest.LineOscillator" start time: Oct 05 22:44 MDT
+"NextFrameTest.LineOscillator" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -358,20 +358,20 @@ Note: Google Test filter = NextFrameTest.LineOscillator
 [----------] Global test environment set-up.
 [----------] 1 test from NextFrameTest
 [ RUN      ] NextFrameTest.LineOscillator
-warning: queue 0xff23d0 destroyed while proxies still attached:
+warning: queue 0x1fa5300 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-0000111000000000[       OK ] NextFrameTest.LineOscillator (116 ms)
-[----------] 1 test from NextFrameTest (116 ms total)
+0000111000000000[       OK ] NextFrameTest.LineOscillator (144 ms)
+[----------] 1 test from NextFrameTest (144 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (116 ms total)
+[==========] 1 test from 1 test suite ran. (144 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.12 sec
+Test time =   0.15 sec
 ----------------------------------------------------------
 Test Passed.
-"NextFrameTest.LineOscillator" end time: Oct 05 22:44 MDT
+"NextFrameTest.LineOscillator" end time: Oct 05 22:56 MDT
 "NextFrameTest.LineOscillator" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -379,7 +379,7 @@ Test Passed.
 14/15 Test: DisplayConstructorTest.InvalidParams
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=DisplayConstructorTest.InvalidParams" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"DisplayConstructorTest.InvalidParams" start time: Oct 05 22:44 MDT
+"DisplayConstructorTest.InvalidParams" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -398,7 +398,7 @@ Note: Google Test filter = DisplayConstructorTest.InvalidParams
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"DisplayConstructorTest.InvalidParams" end time: Oct 05 22:44 MDT
+"DisplayConstructorTest.InvalidParams" end time: Oct 05 22:56 MDT
 "DisplayConstructorTest.InvalidParams" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -406,7 +406,7 @@ Test Passed.
 15/15 Test: DisplayConstructorTest.ValidParams
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=DisplayConstructorTest.ValidParams" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"DisplayConstructorTest.ValidParams" start time: Oct 05 22:44 MDT
+"DisplayConstructorTest.ValidParams" start time: Oct 05 22:56 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -415,21 +415,21 @@ Note: Google Test filter = DisplayConstructorTest.ValidParams
 [----------] Global test environment set-up.
 [----------] 1 test from DisplayConstructorTest
 [ RUN      ] DisplayConstructorTest.ValidParams
-warning: queue 0x212dc50 destroyed while proxies still attached:
+warning: queue 0x20404f0 destroyed while proxies still attached:
   wl_callback@43 still attached
   wl_surface@41 still attached
-[       OK ] DisplayConstructorTest.ValidParams (94 ms)
-[----------] 1 test from DisplayConstructorTest (94 ms total)
+[       OK ] DisplayConstructorTest.ValidParams (113 ms)
+[----------] 1 test from DisplayConstructorTest (113 ms total)
 
 [----------] Global test environment tear-down
-[==========] 1 test from 1 test suite ran. (94 ms total)
+[==========] 1 test from 1 test suite ran. (113 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.10 sec
+Test time =   0.12 sec
 ----------------------------------------------------------
 Test Passed.
-"DisplayConstructorTest.ValidParams" end time: Oct 05 22:44 MDT
+"DisplayConstructorTest.ValidParams" end time: Oct 05 22:56 MDT
 "DisplayConstructorTest.ValidParams" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 05 22:44 MDT
+End testing: Oct 05 22:56 MDT

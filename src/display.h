@@ -14,6 +14,8 @@ class Display
         Display(int windowWidth, int windowHeight, int gridWidth, int gridHeight);
         ~Display();
 
+        void clear();
+
         SDL_Event* getEvent();
         SDL_Window* getWindow();
         void setWindow(SDL_Window* win);

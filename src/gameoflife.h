@@ -33,8 +33,6 @@ class GameOfLife {
         int getWidth();
         std::vector<std::vector<int>> getWorld();
         
-        int initDisplay();                             // Initializes SDL, simulation
-                                                       //
         GameOfLife(int w, int h);               // Constructor
         ~GameOfLife();
 
