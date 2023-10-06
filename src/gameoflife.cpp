@@ -51,10 +51,10 @@ int GameOfLife::initDisplay()
         throw(SDL_GetError());
     }
 
-    window = SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,wwidth,wheight,0);
-    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_TARGETTEXTURE);
+    display.setWindow( SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,wwidth,wheight,0));
+    display.setRenderer(SDL_CreateRenderer(display.getWindow(), -1, SDL_RENDERER_TARGETTEXTURE));
 
-    if(!(window && renderer))
+    if(!(display.getWindow() && display.getRenderer()))
     {
         throw(SDL_GetError());
     }
@@ -63,64 +63,31 @@ int GameOfLife::initDisplay()
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
     
     // Texture is a pixel grid with the world dimensions, scales up to the window size
-    texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height);
-    if(!texture)
+    display.setTexture(SDL_CreateTexture(display.getRenderer(), SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height));
+    if(!display.getTexture())
     {
         throw(SDL_GetError());
     }
 
 
-    setWin(wwidth, wheight, 0, 0);
-    setView(width, height, 0, 0);
+    display.setWin(wwidth, wheight, 0, 0);
+    display.setView(width, height, 0, 0);
 
     return 0;
 }
 
-void GameOfLife::setView(int w, int h, int x, int y)
-{
-    if(w<1 || h<1 || x<0 || y<0)
-    {
-        throw("Dimensions must be positive, origin must be nonnegative");
-        return;
-    }
-    view.w = w;
-    view.h = h;
-    view.x = x;
-    view.y = y;
-}
-SDL_Rect GameOfLife::getView()
-{
-    return view;
-}
-SDL_Rect GameOfLife::getWin()
-{
-    return win;
-}
-
-void GameOfLife::setWin(int w, int h, int x, int y)
-{
-    if(w<1 || h<1 || x<0 || y<0)
-    {
-        throw("Dimensions must be positive, origin must be nonnegative");
-        return;
-    }
-    win.w = w;
-    win.h = h;
-    win.x = x;
-    win.y = y;
-}
 
 // Clear screen
 // Default black background
 int GameOfLife::clear()
 {
     int checkError = 0;
-    checkError += SDL_SetRenderTarget(renderer, texture);
-    checkError += SDL_SetRenderDrawColor(renderer,0,0,0,255);
-    checkError += SDL_RenderClear(renderer);
-    checkError += SDL_SetRenderTarget(renderer, NULL);
+    checkError += SDL_SetRenderTarget(display.getRenderer(), display.getTexture());
+    checkError += SDL_SetRenderDrawColor(display.getRenderer(),0,0,0,255);
+    checkError += SDL_RenderClear(display.getRenderer());
+    checkError += SDL_SetRenderTarget(display.getRenderer(), NULL);
 
-    checkError += SDL_RenderCopy(renderer,texture,&view,&win);
+    checkError += SDL_RenderCopy(display.getRenderer(),display.getTexture(),display.getView(),display.getWin());
     if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
@@ -136,21 +103,21 @@ int GameOfLife::draw()
         throw(s);
     }
 
-    checkError+=SDL_SetRenderTarget(renderer, texture);
-    checkError+=SDL_SetRenderDrawColor(renderer,255,255,255,255);   // White foreground
+    checkError+=SDL_SetRenderTarget(display.getRenderer(), display.getTexture());
+    checkError+=SDL_SetRenderDrawColor(display.getRenderer(),255,255,255,255);   // White foreground
 
     // Draw the world. If world cell is 0, draw nothing, if 1, draw a white pixel
     for(int i=0; i<height; i++)
     {
         for(int j=0; j<width; j++)
         {
-            if(world[i][j]==1) checkError+=SDL_RenderDrawPoint(renderer,j,i);
+            if(world[i][j]==1) checkError+=SDL_RenderDrawPoint(display.getRenderer(),j,i);
         }
     }
 
     // Green point at center of screen
-    checkError+=SDL_SetRenderDrawColor(renderer,0,255,0,255);
-    checkError+=SDL_RenderDrawPoint(renderer,width/2,height/2);
+    checkError+=SDL_SetRenderDrawColor(display.getRenderer(),0,255,0,255);
+    checkError+=SDL_RenderDrawPoint(display.getRenderer(),width/2,height/2);
 
     // When paused, draw a grey cell wherever the mouse pointer is located
     if(paused)
@@ -159,9 +126,9 @@ int GameOfLife::draw()
     }
     
     // Draw newly computed texture to window
-    checkError+=SDL_SetRenderTarget(renderer, NULL);
-    checkError+=SDL_RenderCopy(renderer,texture,&view,&win);
-    SDL_RenderPresent(renderer);
+    checkError+=SDL_SetRenderTarget(display.getRenderer(), NULL);
+    checkError+=SDL_RenderCopy(display.getRenderer(),display.getTexture(),display.getView(),display.getWin());
+    SDL_RenderPresent(display.getRenderer());
     
     if(checkError!=0) throw(SDL_GetError());
     return 0;
@@ -172,8 +139,8 @@ int GameOfLife::drawCursor()
     int checkError = 0;
     int x, y;
     SDL_GetMouseState(&x,&y);
-    checkError+=SDL_SetRenderDrawColor(renderer,200,200,200,255);
-    checkError+=SDL_RenderDrawPoint(renderer, (find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
+    checkError+=SDL_SetRenderDrawColor(display.getRenderer(),200,200,200,255);
+    checkError+=SDL_RenderDrawPoint(display.getRenderer(), (find_nearest(x,find_nearest(display.getWin()->w,display.getView()->w)))+display.getView()->x,(find_nearest(y,find_nearest(display.getWin()->h,display.getView()->h)))+display.getView()->y);
     if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
@@ -181,7 +148,7 @@ int GameOfLife::drawCursor()
 // Compute next iteration
 int GameOfLife::next()
 {
-    // Count how many of the cells 8 neighbours are alive.
+    // Count how many of the cells 8 neighbours are alive->
     int sum=0; 
     for(int i=0; i<height; i++)
     {
@@ -230,9 +197,10 @@ int GameOfLife::next()
 // Handle input using SDl
 int GameOfLife::getInput()
 {    
-    while(SDL_PollEvent(&e))
+    SDL_Event* e;
+    while(SDL_PollEvent(e = display.getEvent()))
     {
-        switch(e.type)
+        switch(e->type)
         {
             // X button on window
             case SDL_QUIT:
@@ -243,13 +211,13 @@ int GameOfLife::getInput()
             // Mouse click
             case SDL_MOUSEBUTTONDOWN:
                 {
-                    switch(e.button.button)
+                    switch(e->button.button)
                     {
                         // Left click when paused will place a cell at the mouse cursor
                         case SDL_BUTTON_LEFT:
                             if(paused)
                             {
-                                world[(find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y][(find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x] = 1;
+                                world[(find_nearest(e->button.y,find_nearest(display.getWin()->h,display.getView()->h)))+display.getView()->y][(find_nearest(e->button.x,find_nearest(display.getWin()->w,display.getView()->w)))+display.getView()->x] = 1;
                             }
                             break;
 
@@ -257,7 +225,7 @@ int GameOfLife::getInput()
                         case SDL_BUTTON_RIGHT:
                             if(paused)
                             {
-                                world[(find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y][(find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x] = 0;
+                                world[(find_nearest(e->button.y,find_nearest(display.getWin()->h,display.getView()->h)))+display.getView()->y][(find_nearest(e->button.x,find_nearest(display.getWin()->w,display.getView()->w)))+display.getView()->x] = 0;
                             }
                             break;
                     }
@@ -266,10 +234,10 @@ int GameOfLife::getInput()
             // keyboard events
             case SDL_KEYDOWN:
                 {
-                    switch(e.key.keysym.sym)
+                    switch(e->key.keysym.sym)
                     {
 
-                        // p will toggle pause state.
+                        // p will toggle pause state->
                         // While paused, sim will continue to draw and 
                         // handle input
                         case SDLK_p:
@@ -314,17 +282,17 @@ int GameOfLife::getInput()
                         // number keys 1-3 will set the zoom level
                         case SDLK_1:
                             SDL_Log("Zoom Level 1");
-                            setView(width,height,0,0);
+                            display.setView(width,height,0,0);
                             draw();
                             break;
                         case SDLK_2:
                             SDL_Log("Zoom Level 2");
-                            setView(272,153,(width-272)/2,(height-153)/2);
+                            display.setView(272,153,(width-272)/2,(height-153)/2);
                             draw();
                             break;
                         case SDLK_3:
                             SDL_Log("Zoom Level 3");
-                            setView(144,81,(width-144)/2,(height-81)/2);
+                            display.setView(144,81,(width-144)/2,(height-81)/2);
                             draw();
                             break;
                     }

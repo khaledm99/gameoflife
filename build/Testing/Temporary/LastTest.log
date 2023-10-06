@@ -1,10 +1,10 @@
-Start testing: Oct 05 10:16 MDT
+Start testing: Oct 05 20:47 MDT
 ----------------------------------------------------------
 1/13 Testing: ModTest.NonNegativeValues
 1/13 Test: ModTest.NonNegativeValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NonNegativeValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"ModTest.NonNegativeValues" start time: Oct 05 10:16 MDT
+"ModTest.NonNegativeValues" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -20,10 +20,10 @@ Note: Google Test filter = ModTest.NonNegativeValues
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"ModTest.NonNegativeValues" end time: Oct 05 10:16 MDT
+"ModTest.NonNegativeValues" end time: Oct 05 20:47 MDT
 "ModTest.NonNegativeValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -31,7 +31,7 @@ Test Passed.
 2/13 Test: ModTest.NegativeValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=ModTest.NegativeValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"ModTest.NegativeValues" start time: Oct 05 10:16 MDT
+"ModTest.NegativeValues" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -50,7 +50,7 @@ Note: Google Test filter = ModTest.NegativeValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"ModTest.NegativeValues" end time: Oct 05 10:16 MDT
+"ModTest.NegativeValues" end time: Oct 05 20:47 MDT
 "ModTest.NegativeValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -58,7 +58,7 @@ Test Passed.
 3/13 Test: RoundTest.ZeroValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.ZeroValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"RoundTest.ZeroValues" start time: Oct 05 10:16 MDT
+"RoundTest.ZeroValues" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -77,7 +77,7 @@ Note: Google Test filter = RoundTest.ZeroValues
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"RoundTest.ZeroValues" end time: Oct 05 10:16 MDT
+"RoundTest.ZeroValues" end time: Oct 05 20:47 MDT
 "RoundTest.ZeroValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -85,7 +85,7 @@ Test Passed.
 4/13 Test: RoundTest.NonZeroValues
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=RoundTest.NonZeroValues" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"RoundTest.NonZeroValues" start time: Oct 05 10:16 MDT
+"RoundTest.NonZeroValues" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -101,10 +101,10 @@ Note: Google Test filter = RoundTest.NonZeroValues
 [==========] 1 test from 1 test suite ran. (0 ms total)
 [  PASSED  ] 1 test.
 <end of output>
-Test time =   0.00 sec
+Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"RoundTest.NonZeroValues" end time: Oct 05 10:16 MDT
+"RoundTest.NonZeroValues" end time: Oct 05 20:47 MDT
 "RoundTest.NonZeroValues" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -112,7 +112,7 @@ Test Passed.
 5/13 Test: GOLConstructorTest.NonPosVals
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=GOLConstructorTest.NonPosVals" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"GOLConstructorTest.NonPosVals" start time: Oct 05 10:16 MDT
+"GOLConstructorTest.NonPosVals" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -131,7 +131,7 @@ Note: Google Test filter = GOLConstructorTest.NonPosVals
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"GOLConstructorTest.NonPosVals" end time: Oct 05 10:16 MDT
+"GOLConstructorTest.NonPosVals" end time: Oct 05 20:47 MDT
 "GOLConstructorTest.NonPosVals" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -139,7 +139,7 @@ Test Passed.
 6/13 Test: GOLConstructorTest.ValidConstructor
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=GOLConstructorTest.ValidConstructor" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"GOLConstructorTest.ValidConstructor" start time: Oct 05 10:16 MDT
+"GOLConstructorTest.ValidConstructor" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -158,7 +158,7 @@ Note: Google Test filter = GOLConstructorTest.ValidConstructor
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"GOLConstructorTest.ValidConstructor" end time: Oct 05 10:16 MDT
+"GOLConstructorTest.ValidConstructor" end time: Oct 05 20:47 MDT
 "GOLConstructorTest.ValidConstructor" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -166,7 +166,7 @@ Test Passed.
 7/13 Test: SpeedTest.IncreaseSpeed
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SpeedTest.IncreaseSpeed" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SpeedTest.IncreaseSpeed" start time: Oct 05 10:16 MDT
+"SpeedTest.IncreaseSpeed" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -185,7 +185,7 @@ Note: Google Test filter = SpeedTest.IncreaseSpeed
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SpeedTest.IncreaseSpeed" end time: Oct 05 10:16 MDT
+"SpeedTest.IncreaseSpeed" end time: Oct 05 20:47 MDT
 "SpeedTest.IncreaseSpeed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -193,7 +193,7 @@ Test Passed.
 8/13 Test: SpeedTest.DecreaseSpeed
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SpeedTest.DecreaseSpeed" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SpeedTest.DecreaseSpeed" start time: Oct 05 10:16 MDT
+"SpeedTest.DecreaseSpeed" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -212,7 +212,7 @@ Note: Google Test filter = SpeedTest.DecreaseSpeed
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SpeedTest.DecreaseSpeed" end time: Oct 05 10:16 MDT
+"SpeedTest.DecreaseSpeed" end time: Oct 05 20:47 MDT
 "SpeedTest.DecreaseSpeed" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -220,7 +220,7 @@ Test Passed.
 9/13 Test: SetViewTest.InvalidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetViewTest.InvalidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetViewTest.InvalidSettings" start time: Oct 05 10:16 MDT
+"SetViewTest.InvalidSettings" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -239,7 +239,7 @@ Note: Google Test filter = SetViewTest.InvalidSettings
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SetViewTest.InvalidSettings" end time: Oct 05 10:16 MDT
+"SetViewTest.InvalidSettings" end time: Oct 05 20:47 MDT
 "SetViewTest.InvalidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -247,7 +247,7 @@ Test Passed.
 10/13 Test: SetViewTest.ValidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetViewTest.ValidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetViewTest.ValidSettings" start time: Oct 05 10:16 MDT
+"SetViewTest.ValidSettings" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -266,7 +266,7 @@ Note: Google Test filter = SetViewTest.ValidSettings
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SetViewTest.ValidSettings" end time: Oct 05 10:16 MDT
+"SetViewTest.ValidSettings" end time: Oct 05 20:47 MDT
 "SetViewTest.ValidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -274,7 +274,7 @@ Test Passed.
 11/13 Test: SetWinTest.InvalidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetWinTest.InvalidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetWinTest.InvalidSettings" start time: Oct 05 10:16 MDT
+"SetWinTest.InvalidSettings" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -293,7 +293,7 @@ Note: Google Test filter = SetWinTest.InvalidSettings
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SetWinTest.InvalidSettings" end time: Oct 05 10:16 MDT
+"SetWinTest.InvalidSettings" end time: Oct 05 20:47 MDT
 "SetWinTest.InvalidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -301,7 +301,7 @@ Test Passed.
 12/13 Test: SetWinTest.ValidSettings
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=SetWinTest.ValidSettings" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"SetWinTest.ValidSettings" start time: Oct 05 10:16 MDT
+"SetWinTest.ValidSettings" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -320,7 +320,7 @@ Note: Google Test filter = SetWinTest.ValidSettings
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"SetWinTest.ValidSettings" end time: Oct 05 10:16 MDT
+"SetWinTest.ValidSettings" end time: Oct 05 20:47 MDT
 "SetWinTest.ValidSettings" time elapsed: 00:00:00
 ----------------------------------------------------------
 
@@ -328,7 +328,7 @@ Test Passed.
 13/13 Test: NextFrameTest.LineOscillator
 Command: "/home/khaled/Documents/gameoflife/build/gol_test" "--gtest_filter=NextFrameTest.LineOscillator" "--gtest_also_run_disabled_tests"
 Directory: /home/khaled/Documents/gameoflife/build
-"NextFrameTest.LineOscillator" start time: Oct 05 10:16 MDT
+"NextFrameTest.LineOscillator" start time: Oct 05 20:47 MDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/khaled/Documents/gameoflife/build/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -347,8 +347,8 @@ Note: Google Test filter = NextFrameTest.LineOscillator
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"NextFrameTest.LineOscillator" end time: Oct 05 10:16 MDT
+"NextFrameTest.LineOscillator" end time: Oct 05 20:47 MDT
 "NextFrameTest.LineOscillator" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Oct 05 10:16 MDT
+End testing: Oct 05 20:47 MDT

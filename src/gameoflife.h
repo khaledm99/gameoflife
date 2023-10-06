@@ -23,12 +23,12 @@ class GameOfLife {
 
         Display display;
         // SDL boilerplate
-        SDL_Event e;
-        SDL_Window* window = nullptr;
-        SDL_Renderer* renderer = nullptr;
-        SDL_Texture* texture = nullptr;
-        SDL_Rect win;       // Used to pass dimensions information to window object
-        SDL_Rect view;      // Used to pass dimensions information to renderer - to change zoom level
+        //SDL_Event e;
+        //SDL_Window* window = nullptr;
+        //SDL_Renderer* renderer = nullptr;
+        //SDL_Texture* texture = nullptr;
+        //SDL_Rect win;       // Used to pass dimensions information to window object
+        //SDL_Rect view;      // Used to pass dimensions information to renderer - to change zoom level
 
         
         std::vector<std::vector<int>> world;    // 2D grid of cells
@@ -41,9 +41,9 @@ class GameOfLife {
         int getWidth();
         std::vector<std::vector<int>> getWorld();
         void setView(int w, int h, int x, int y);
-        SDL_Rect getView();
-        SDL_Rect getWin();
-        void setWin(int w, int h, int x, int y);
+        //SDL_Rect getView();
+        //SDL_Rect getWin();
+        
         int initDisplay();                             // Initializes SDL, simulation
                                                        //
         GameOfLife(int w, int h);               // Constructor
