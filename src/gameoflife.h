@@ -40,9 +40,7 @@ class GameOfLife {
         void eraseCell(int x, int y);
         int getCell(int x, int y);
 
-        int clear();                            // Clears screen
         int draw();                             // Draws current iteration of world
-        int drawCursor();
         int next();                             // Computes next iteration
         int getInput();                         // Handles keyboard input
 

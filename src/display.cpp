@@ -1,4 +1,5 @@
 #include "display.h"
+#include "util.h"
 #include <SDL2/SDL.h>
 
 
@@ -89,6 +90,17 @@ void Display::draw(std::vector<std::vector<int>> &grid)
     SDL_RenderPresent(renderer);
     
     if(checkError!=0) throw(SDL_GetError());
+}
+
+void Display::drawCursor()
+{
+    int x, y;
+    SDL_GetMouseState(&x,&y);
+    drawPoint((find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
+    SDL_SetRenderTarget(renderer, NULL);
+    SDL_RenderCopy(renderer,texture,&view,&win);
+    SDL_RenderPresent(renderer);
+
 }
 
 SDL_Window* Display::getWindow()

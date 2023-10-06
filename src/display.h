@@ -18,6 +18,7 @@ class Display
         void clear();
         void draw(std::vector<std::vector<int>> &grd);
         void drawPoint(int x, int y);
+        void drawCursor();
 
         SDL_Event* getEvent();
         SDL_Window* getWindow();

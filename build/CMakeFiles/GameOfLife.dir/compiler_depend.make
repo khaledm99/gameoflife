@@ -3,6 +3,7 @@
 
 CMakeFiles/GameOfLife.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/src/display.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/util.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
   /usr/include/SDL2/SDL_atomic.h \
@@ -868,7 +869,7 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h:
 
-/usr/include/c++/13/bits/range_access.h:
+/usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h:
 
@@ -1062,6 +1063,14 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 
 /usr/include/SDL2/SDL_pixels.h:
 
+/usr/include/SDL2/SDL_mouse.h:
+
+/usr/include/SDL2/SDL_error.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
+
 /usr/include/c++/13/bits/exception.h:
 
 /home/khaled/Documents/gameoflife/src/display.cpp:
@@ -1095,14 +1104,6 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/SDL2/SDL_config-x86_64.h:
-
-/usr/include/SDL2/SDL_mouse.h:
-
-/usr/include/SDL2/SDL_error.h:
-
-/usr/include/c++/13/bits/stl_vector.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
 
@@ -1199,6 +1200,8 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/lib/gcc/x86_64-redhat-linux/13/include/bmiintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/popcntintrin.h:
+
+/usr/include/c++/13/bits/range_access.h:
 
 /usr/include/c++/13/bits/requires_hosted.h:
 
@@ -1403,5 +1406,3 @@ CMakeFiles/GameOfLife.dir/src/main.cpp.o: /home/khaled/Documents/gameoflife/src/
 /usr/lib/gcc/x86_64-redhat-linux/13/include/raointintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/serializeintrin.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:

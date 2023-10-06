@@ -3,6 +3,7 @@
 
 CMakeFiles/gol_test.dir/src/display.cpp.o: /home/khaled/Documents/gameoflife/src/display.cpp \
   /home/khaled/Documents/gameoflife/src/display.h \
+  /home/khaled/Documents/gameoflife/src/util.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
   /usr/include/SDL2/SDL_atomic.h \
@@ -1328,7 +1329,9 @@ _deps/googletest-src/googletest/include/gtest/gtest-printers.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/stddef.h:
 
-/usr/include/c++/13/bits/range_access.h:
+/usr/include/c++/13/bits/stl_raw_storage_iter.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/tmmintrin.h:
 
@@ -1590,6 +1593,18 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 
 /usr/include/SDL2/SDL_pixels.h:
 
+_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
+
+/usr/include/SDL2/SDL_mouse.h:
+
+_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
+
+/usr/include/SDL2/SDL_error.h:
+
+/usr/include/c++/13/bits/stl_vector.h:
+
+/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
+
 /usr/include/c++/13/bits/exception.h:
 
 /home/khaled/Documents/gameoflife/src/display.cpp:
@@ -1629,18 +1644,6 @@ _deps/googletest-src/googletest/include/gtest/internal/gtest-port.h:
 /usr/include/bits/mathcalls-helper-functions.h:
 
 /usr/include/SDL2/SDL_config-x86_64.h:
-
-_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h:
-
-/usr/include/SDL2/SDL_mouse.h:
-
-_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h:
-
-/usr/include/SDL2/SDL_error.h:
-
-/usr/include/c++/13/bits/stl_vector.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/fxsrintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/avx512vnnivlintrin.h:
 
@@ -1757,6 +1760,8 @@ _deps/googletest-src/googletest/include/gtest/gtest-param-test.h:
 /usr/lib/gcc/x86_64-redhat-linux/13/include/bmiintrin.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/popcntintrin.h:
+
+/usr/include/c++/13/bits/range_access.h:
 
 /usr/include/c++/13/bits/requires_hosted.h:
 
@@ -2007,7 +2012,3 @@ _deps/googletest-src/googletest/include/gtest/gtest.h:
 /usr/include/bits/struct_stat.h:
 
 /usr/lib/gcc/x86_64-redhat-linux/13/include/serializeintrin.h:
-
-/usr/include/c++/13/bits/stl_raw_storage_iter.h:
-
-/usr/lib/gcc/x86_64-redhat-linux/13/include/stdarg.h:

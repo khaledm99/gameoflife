@@ -4,6 +4,7 @@
 CMakeFiles/gol_test.dir/src/display.cpp.o
  /home/khaled/Documents/gameoflife/src/display.cpp
  /home/khaled/Documents/gameoflife/src/display.h
+ /home/khaled/Documents/gameoflife/src/util.h
  /usr/include/SDL2/SDL.h
  /usr/include/SDL2/SDL_assert.h
  /usr/include/SDL2/SDL_atomic.h

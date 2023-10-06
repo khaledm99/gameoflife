@@ -46,31 +46,14 @@ GameOfLife::~GameOfLife()
     delete display;
 }
 
-
-
-
 int GameOfLife::draw()
 {
     display->draw(world); 
     // When paused, draw a grey cell wherever the mouse pointer is located
     if(paused)
     {
-        drawCursor();
+        display->drawCursor();
     }
-    return 0;
-}
-
-
-
-
-int GameOfLife::drawCursor()
-{
-    int checkError = 0;
-    int x, y;
-    SDL_GetMouseState(&x,&y);
-    checkError+=SDL_SetRenderDrawColor(display->getRenderer(),200,200,200,255);
-    checkError+=SDL_RenderDrawPoint(display->getRenderer(), (find_nearest(x,find_nearest(display->getWin()->w,display->getView()->w)))+display->getView()->x,(find_nearest(y,find_nearest(display->getWin()->h,display->getView()->h)))+display->getView()->y);
-    if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
 
