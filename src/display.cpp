@@ -1,5 +1,6 @@
 #include "display.h"
 #include "util.h"
+#include "input.h"
 #include <SDL2/SDL.h>
 
 
@@ -166,36 +167,37 @@ SDL_Event* Display::getEvent()
 }
 
 // Handle input using SDl
-void Display::getInput()
+Input* Display::getInput()
 {    
-    while(SDL_PollEvent(&e)
+    while(SDL_PollEvent(&e))
     {
-        switch(e->type)
+        switch(e.type)
         {
             // X button on window
             case SDL_QUIT:
-                SDL_Log("Program quit...");
-                exit(0);
+                return new QuitInput();
                 break;
 
             // Mouse click
             case SDL_MOUSEBUTTONDOWN:
                 {
-                    switch(e->button.button)
+                    switch(e.button.button)
                     {
                         // Left click when paused will place a cell at the mouse cursor
                         case SDL_BUTTON_LEFT:
-                            if(paused)
                             {
-                                world[(find_nearest(e->button.y,find_nearest(display->getWin()->h,display->getView()->h)))+display->getView()->y][(find_nearest(e->button.x,find_nearest(display->getWin()->w,display->getView()->w)))+display->getView()->x] = 1;
+                                int xcoord= ((find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x) ;
+                                int ycoord = ((find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y);
+                                return new ClickInput(xcoord,ycoord,1);
                             }
                             break;
 
                         // Right click when paused will delete a cell at the mouse cursor
                         case SDL_BUTTON_RIGHT:
-                            if(paused)
-                            {
-                                world[(find_nearest(e->button.y,find_nearest(display->getWin()->h,display->getView()->h)))+display->getView()->y][(find_nearest(e->button.x,find_nearest(display->getWin()->w,display->getView()->w)))+display->getView()->x] = 0;
+                            {   
+                                int xcoord = ((find_nearest(e.button.x,find_nearest(win.w,view.w)))+view.x) ;
+                                int ycoord = ((find_nearest(e.button.y,find_nearest(win.h,view.h)))+view.y);
+                                return new ClickInput(xcoord,ycoord,0);
                             }
                             break;
                     }
@@ -204,52 +206,39 @@ void Display::getInput()
             // keyboard events
             case SDL_KEYDOWN:
                 {
-                    switch(e->key.keysym.sym)
+                    switch(e.key.keysym.sym)
                     {
 
-                        // p will toggle pause state->
+                        // p will toggle pause state.
                         // While paused, sim will continue to draw and 
                         // handle input
                         case SDLK_p:
-                            paused = !paused;
-                            while(paused)
-                            {
-                                draw();
-                                getInput();
-                            }
+                            return new TogglePause();
                             break;
                         // n will compute next iteration when paused
                         case SDLK_n:
-                            if(paused)
-                            {
-                                next();
-                            }
+                            return new StepInput();
                             break;
                         // Brackets will decrease and increase sim speed, respectively
                         // Speed is clamped to 0 and 500
                         case SDLK_RIGHTBRACKET:
-                            changeSpeed(-20);
+                            return new ChangeSpeedInput(-20); 
                             break;
                         case SDLK_LEFTBRACKET:
-                            changeSpeed(20);
+                            return new ChangeSpeedInput(20);
                             break;
                         // r will randomly populate world
                         case SDLK_r:
-                            for(int i=0; i<height; i++)
-                            {
-                                for(int j=0; j<width; j++)
-                                {
-                                    if(rand() % 100 + 1 > 70) world[i][j] = 1;
-                                }
-                            }
                             SDL_Log("randomized world");
+                            return new ResetInput(); 
                             break;
                         // q will quit
                         case SDLK_q:
                             SDL_Log("Program quit(q)...");
-                            exit(0);
+                            return new QuitInput();
                             break;
                         // number keys 1-3 will set the zoom level
+                        /*
                         case SDLK_1:
                             SDL_Log("Zoom Level 1");
                             display->setView(width,height,0,0);
@@ -265,8 +254,12 @@ void Display::getInput()
                             display->setView(144,81,(width-144)/2,(height-81)/2);
                             draw();
                             break;
+                        */
                     }
                 }
+                break;
+            default: 
+                return nullptr;
                 break;
         }
     }

@@ -1,6 +1,8 @@
 #pragma once
 #include <SDL2/SDL.h>
 #include <vector>
+#include "input.h"
+class Input;
 
 class Display
 {
@@ -20,7 +22,7 @@ class Display
         void drawPoint(int x, int y);
         void drawCursor();
 
-        void getInput();
+        Input* getInput();
 
         SDL_Event* getEvent();
         SDL_Window* getWindow();

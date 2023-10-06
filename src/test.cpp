@@ -1,6 +1,7 @@
 #include "gtest/gtest.h"
 #include "gameoflife.h"
 #include "util.h"
+#include "input.h"
 
 TEST(ModTest, NonNegativeValues)
 {
@@ -156,6 +157,91 @@ TEST(DisplayConstructorTest, ValidParams)
     EXPECT_NE(d.getRenderer(), nullptr);
     EXPECT_NE(d.getTexture(), nullptr);
 } 
+
+TEST(InputTest, ClickInputInvalidParams)
+{
+    EXPECT_ANY_THROW(new ClickInput(-1,-1,-1));
+}     
+TEST(InputTest, ClickInputValidParams)
+{
+    ClickInput* c = new ClickInput(1,1,1);
+    EXPECT_EQ(c->x, 1);
+    EXPECT_EQ(c->y, 1);
+    EXPECT_EQ(c->val,1);
+    delete c;
+}
+TEST(InputTest, ClickInputAction)
+{
+    GameOfLife g(3,3);
+    g.setPaused(true);
+    EXPECT_EQ(g.getWorld()[1][1],0);
+    ClickInput c(1,1,1);
+    c.setGamePtr(&g);
+    c.doAction();
+    EXPECT_EQ(g.getWorld()[1][1],1);
+    c.val = 0;
+    c.doAction();
+    EXPECT_EQ(g.getWorld()[1][1],0);
+}
+
+
+TEST(InputTest, SetGetGamePtrTest)
+{
+    GameOfLife g(3,3);
+    Input i;
+    i.setGamePtr(&g);
+    EXPECT_EQ(i.getGamePtr(), &g);
+}
+
+TEST(InputTest, QuitAction)
+{
+    GameOfLife g(1,1);
+    QuitInput i;
+    i.setGamePtr(&g);
+    i.doAction();
+    EXPECT_EQ(g.quitFlag, true);
+}
+TEST(InputTest, PauseTest)
+{
+    GameOfLife g(1,1);
+    TogglePause i;
+    i.setGamePtr(&g);
+    EXPECT_EQ(g.getPaused(), false);
+    i.doAction();
+    EXPECT_EQ(g.getPaused(), true);
+    i.doAction();
+    EXPECT_EQ(g.getPaused(), false);
+}
+TEST(InputTest, SpeedConstructorTest)
+{
+    ChangeSpeedInput c(1);
+    EXPECT_EQ(c.val, 1);
+}
+TEST(InputTest, ChangeSpeedTest)
+{
+    GameOfLife g(1,1);
+    ChangeSpeedInput c(20);
+    c.setGamePtr(&g);
+    EXPECT_EQ(g.getSpeed(),100);
+    c.doAction();
+    EXPECT_EQ(g.getSpeed(),120);
+    c.val = -20;
+    c.doAction();
+    EXPECT_EQ(g.getSpeed(),100);
+}
+TEST(InputTest, StepTest)
+{
+    GameOfLife g(1,1);
+    g.setPaused(true);
+    StepInput s;
+    s.setGamePtr(&g);
+    int iter = g.iteration;
+    s.doAction();
+    EXPECT_EQ(g.iteration, iter=1);
+}
+
+    
+    
 
 
 

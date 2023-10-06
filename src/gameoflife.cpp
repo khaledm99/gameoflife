@@ -1,6 +1,7 @@
 #include <SDL2/SDL.h>
 #include <vector>
 #include "gameoflife.h"
+#include "input.h"
 #include "util.h"
 #include <stdlib.h>
 #include <time.h>
@@ -25,8 +26,17 @@ GameOfLife::GameOfLife(int w, int h)
     
     // Initial speed 
     speed = 100;
-    display = new Display(1280,720,width,height);
+    //display = new Display(1280,720,width,height);
 } 
+
+void GameOfLife::setDisplay(Display* d)
+{
+    display = d;
+}
+Display* GameOfLife::getDisplay()
+{
+    return display;
+}
 
 int GameOfLife::getHeight()
 {
@@ -39,6 +49,10 @@ int GameOfLife::getWidth()
 std::vector<std::vector<int>> GameOfLife::getWorld()
 {
     return world;
+}
+void GameOfLife::setWorld(std::vector<std::vector<int>> arr)
+{
+    world = arr;
 }
 
 GameOfLife::~GameOfLife()
@@ -103,12 +117,21 @@ int GameOfLife::next()
             world[i][j] = temp[i][j];
         }
     }
+    iteration++;
     return 0;
 }
         
 // Handle input using SDl
-int GameOfLife::getInput()
+void GameOfLife::getInput()
 {
+    Input* i = nullptr;
+    i = display->getInput();
+    if(i!=nullptr)
+    {
+        i->setGamePtr(this);
+        i->doAction();
+    }
+    delete i;
 }
 
 int GameOfLife::changeSpeed(int amount)
@@ -137,5 +160,13 @@ int GameOfLife::getCell(int x, int y)
 }
 
 
+bool GameOfLife::getPaused()
+{
+    return paused;
+}
+void GameOfLife::setPaused(bool p)
+{
+    paused = p;
+}
 
 

@@ -3,12 +3,16 @@
 int main()
 {
     // initialize simulation
-    GameOfLife g(432, 243);
+    const int WIDTH = 432;
+    const int HEIGHT = 234;
 
-    g.draw();
+    GameOfLife g(WIDTH, HEIGHT);
+    g.setDisplay(new Display(1280,720,WIDTH,HEIGHT));
+
+    //g.draw();
 
     // Main loop
-    while(true)
+    while(!g.quitFlag)
     {
         g.next();
         try
@@ -20,6 +24,11 @@ int main()
             exit(1);
         }
         g.getInput();
+        while(g.getPaused())
+        {
+            g.draw();
+            g.getInput();
+        }
         SDL_Delay(g.getSpeed());
     }
     return 0;

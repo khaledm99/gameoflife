@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/khaled/Documents/gameoflife/src/display.cpp" "CMakeFiles/gol_test.dir/src/display.cpp.o" "gcc" "CMakeFiles/gol_test.dir/src/display.cpp.o.d"
   "/home/khaled/Documents/gameoflife/src/gameoflife.cpp" "CMakeFiles/gol_test.dir/src/gameoflife.cpp.o" "gcc" "CMakeFiles/gol_test.dir/src/gameoflife.cpp.o.d"
+  "/home/khaled/Documents/gameoflife/src/input.cpp" "CMakeFiles/gol_test.dir/src/input.cpp.o" "gcc" "CMakeFiles/gol_test.dir/src/input.cpp.o.d"
   "/home/khaled/Documents/gameoflife/src/test.cpp" "CMakeFiles/gol_test.dir/src/test.cpp.o" "gcc" "CMakeFiles/gol_test.dir/src/test.cpp.o.d"
   )
 

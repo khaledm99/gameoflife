@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/gol_test.dir/src/display.cpp.o.d"
   "CMakeFiles/gol_test.dir/src/gameoflife.cpp.o"
   "CMakeFiles/gol_test.dir/src/gameoflife.cpp.o.d"
+  "CMakeFiles/gol_test.dir/src/input.cpp.o"
+  "CMakeFiles/gol_test.dir/src/input.cpp.o.d"
   "CMakeFiles/gol_test.dir/src/test.cpp.o"
   "CMakeFiles/gol_test.dir/src/test.cpp.o.d"
   "gol_test"

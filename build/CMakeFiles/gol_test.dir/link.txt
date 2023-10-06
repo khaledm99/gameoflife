@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/gol_test.dir/src/display.cpp.o CMakeFiles/gol_test.dir/src/gameoflife.cpp.o CMakeFiles/gol_test.dir/src/test.cpp.o -o gol_test  /usr/lib64/libSDL2main.a /usr/lib64/libSDL2-2.0.so.0.2600.3 lib/libgtest_main.a lib/libgtest.a 
+/usr/bin/c++ CMakeFiles/gol_test.dir/src/input.cpp.o CMakeFiles/gol_test.dir/src/display.cpp.o CMakeFiles/gol_test.dir/src/gameoflife.cpp.o CMakeFiles/gol_test.dir/src/test.cpp.o -o gol_test  /usr/lib64/libSDL2main.a /usr/lib64/libSDL2-2.0.so.0.2600.3 lib/libgtest_main.a lib/libgtest.a 
