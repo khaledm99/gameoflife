@@ -25,6 +25,7 @@ GameOfLife::GameOfLife(int w, int h)
     
     // Initial speed 
     speed = 100;
+    display = new Display(1280,720,width,height);
 } 
 
 int GameOfLife::getHeight()
@@ -41,40 +42,11 @@ std::vector<std::vector<int>> GameOfLife::getWorld()
 }
 
 GameOfLife::~GameOfLife()
-{}
-
-int GameOfLife::initDisplay()
 {
-
-    if(SDL_Init(SDL_INIT_VIDEO)!=0)
-    {
-        throw(SDL_GetError());
-    }
-
-    display.setWindow( SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,wwidth,wheight,0));
-    display.setRenderer(SDL_CreateRenderer(display.getWindow(), -1, SDL_RENDERER_TARGETTEXTURE));
-
-    if(!(display.getWindow() && display.getRenderer()))
-    {
-        throw(SDL_GetError());
-    }
-
-    // No anti-aliasing
-    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
-    
-    // Texture is a pixel grid with the world dimensions, scales up to the window size
-    display.setTexture(SDL_CreateTexture(display.getRenderer(), SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height));
-    if(!display.getTexture())
-    {
-        throw(SDL_GetError());
-    }
-
-
-    display.setWin(wwidth, wheight, 0, 0);
-    display.setView(width, height, 0, 0);
-
-    return 0;
+    delete display;
 }
+
+
 
 
 // Clear screen
@@ -82,12 +54,12 @@ int GameOfLife::initDisplay()
 int GameOfLife::clear()
 {
     int checkError = 0;
-    checkError += SDL_SetRenderTarget(display.getRenderer(), display.getTexture());
-    checkError += SDL_SetRenderDrawColor(display.getRenderer(),0,0,0,255);
-    checkError += SDL_RenderClear(display.getRenderer());
-    checkError += SDL_SetRenderTarget(display.getRenderer(), NULL);
+    checkError += SDL_SetRenderTarget(display->getRenderer(), display->getTexture());
+    checkError += SDL_SetRenderDrawColor(display->getRenderer(),0,0,0,255);
+    checkError += SDL_RenderClear(display->getRenderer());
+    checkError += SDL_SetRenderTarget(display->getRenderer(), NULL);
 
-    checkError += SDL_RenderCopy(display.getRenderer(),display.getTexture(),display.getView(),display.getWin());
+    checkError += SDL_RenderCopy(display->getRenderer(),display->getTexture(),display->getView(),display->getWin());
     if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
@@ -103,21 +75,21 @@ int GameOfLife::draw()
         throw(s);
     }
 
-    checkError+=SDL_SetRenderTarget(display.getRenderer(), display.getTexture());
-    checkError+=SDL_SetRenderDrawColor(display.getRenderer(),255,255,255,255);   // White foreground
+    checkError+=SDL_SetRenderTarget(display->getRenderer(), display->getTexture());
+    checkError+=SDL_SetRenderDrawColor(display->getRenderer(),255,255,255,255);   // White foreground
 
     // Draw the world. If world cell is 0, draw nothing, if 1, draw a white pixel
     for(int i=0; i<height; i++)
     {
         for(int j=0; j<width; j++)
         {
-            if(world[i][j]==1) checkError+=SDL_RenderDrawPoint(display.getRenderer(),j,i);
+            if(world[i][j]==1) checkError+=SDL_RenderDrawPoint(display->getRenderer(),j,i);
         }
     }
 
     // Green point at center of screen
-    checkError+=SDL_SetRenderDrawColor(display.getRenderer(),0,255,0,255);
-    checkError+=SDL_RenderDrawPoint(display.getRenderer(),width/2,height/2);
+    checkError+=SDL_SetRenderDrawColor(display->getRenderer(),0,255,0,255);
+    checkError+=SDL_RenderDrawPoint(display->getRenderer(),width/2,height/2);
 
     // When paused, draw a grey cell wherever the mouse pointer is located
     if(paused)
@@ -126,9 +98,9 @@ int GameOfLife::draw()
     }
     
     // Draw newly computed texture to window
-    checkError+=SDL_SetRenderTarget(display.getRenderer(), NULL);
-    checkError+=SDL_RenderCopy(display.getRenderer(),display.getTexture(),display.getView(),display.getWin());
-    SDL_RenderPresent(display.getRenderer());
+    checkError+=SDL_SetRenderTarget(display->getRenderer(), NULL);
+    checkError+=SDL_RenderCopy(display->getRenderer(),display->getTexture(),display->getView(),display->getWin());
+    SDL_RenderPresent(display->getRenderer());
     
     if(checkError!=0) throw(SDL_GetError());
     return 0;
@@ -139,8 +111,8 @@ int GameOfLife::drawCursor()
     int checkError = 0;
     int x, y;
     SDL_GetMouseState(&x,&y);
-    checkError+=SDL_SetRenderDrawColor(display.getRenderer(),200,200,200,255);
-    checkError+=SDL_RenderDrawPoint(display.getRenderer(), (find_nearest(x,find_nearest(display.getWin()->w,display.getView()->w)))+display.getView()->x,(find_nearest(y,find_nearest(display.getWin()->h,display.getView()->h)))+display.getView()->y);
+    checkError+=SDL_SetRenderDrawColor(display->getRenderer(),200,200,200,255);
+    checkError+=SDL_RenderDrawPoint(display->getRenderer(), (find_nearest(x,find_nearest(display->getWin()->w,display->getView()->w)))+display->getView()->x,(find_nearest(y,find_nearest(display->getWin()->h,display->getView()->h)))+display->getView()->y);
     if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
@@ -198,7 +170,7 @@ int GameOfLife::next()
 int GameOfLife::getInput()
 {    
     SDL_Event* e;
-    while(SDL_PollEvent(e = display.getEvent()))
+    while(SDL_PollEvent(e = display->getEvent()))
     {
         switch(e->type)
         {
@@ -217,7 +189,7 @@ int GameOfLife::getInput()
                         case SDL_BUTTON_LEFT:
                             if(paused)
                             {
-                                world[(find_nearest(e->button.y,find_nearest(display.getWin()->h,display.getView()->h)))+display.getView()->y][(find_nearest(e->button.x,find_nearest(display.getWin()->w,display.getView()->w)))+display.getView()->x] = 1;
+                                world[(find_nearest(e->button.y,find_nearest(display->getWin()->h,display->getView()->h)))+display->getView()->y][(find_nearest(e->button.x,find_nearest(display->getWin()->w,display->getView()->w)))+display->getView()->x] = 1;
                             }
                             break;
 
@@ -225,7 +197,7 @@ int GameOfLife::getInput()
                         case SDL_BUTTON_RIGHT:
                             if(paused)
                             {
-                                world[(find_nearest(e->button.y,find_nearest(display.getWin()->h,display.getView()->h)))+display.getView()->y][(find_nearest(e->button.x,find_nearest(display.getWin()->w,display.getView()->w)))+display.getView()->x] = 0;
+                                world[(find_nearest(e->button.y,find_nearest(display->getWin()->h,display->getView()->h)))+display->getView()->y][(find_nearest(e->button.x,find_nearest(display->getWin()->w,display->getView()->w)))+display->getView()->x] = 0;
                             }
                             break;
                     }
@@ -282,17 +254,17 @@ int GameOfLife::getInput()
                         // number keys 1-3 will set the zoom level
                         case SDLK_1:
                             SDL_Log("Zoom Level 1");
-                            display.setView(width,height,0,0);
+                            display->setView(width,height,0,0);
                             draw();
                             break;
                         case SDLK_2:
                             SDL_Log("Zoom Level 2");
-                            display.setView(272,153,(width-272)/2,(height-153)/2);
+                            display->setView(272,153,(width-272)/2,(height-153)/2);
                             draw();
                             break;
                         case SDLK_3:
                             SDL_Log("Zoom Level 3");
-                            display.setView(144,81,(width-144)/2,(height-81)/2);
+                            display->setView(144,81,(width-144)/2,(height-81)/2);
                             draw();
                             break;
                     }

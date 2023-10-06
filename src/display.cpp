@@ -2,6 +2,41 @@
 #include <SDL2/SDL.h>
 
 
+Display::Display(int windowWidth, int windowHeight, int gridWidth, int gridHeight)
+{   
+    setWin(windowWidth, windowHeight, 0, 0);
+    setView(gridWidth, gridHeight, 0, 0);
+    if(SDL_Init(SDL_INIT_VIDEO)!=0)
+    {
+        throw(SDL_GetError());
+    }
+
+    setWindow( SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,windowWidth,windowHeight,0));
+    setRenderer(SDL_CreateRenderer(getWindow(), -1, SDL_RENDERER_TARGETTEXTURE));
+
+    if(!(getWindow() && getRenderer()))
+    {
+        throw(SDL_GetError());
+    }
+
+    // No anti-aliasing
+    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
+    
+    // Texture is a pixel grid with the world dimensions, scales up to the window size
+    setTexture(SDL_CreateTexture(getRenderer(), SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, gridWidth, gridHeight));
+    if(!getTexture())
+    {
+        throw(SDL_GetError());
+    }
+
+}
+Display::~Display()
+{
+    SDL_QuitSubSystem(SDL_INIT_VIDEO);
+    SDL_Quit();
+}
+
+
 SDL_Window* Display::getWindow()
 {
     return window;

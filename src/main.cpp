@@ -4,7 +4,6 @@ int main()
 {
     // initialize simulation
     GameOfLife g(432, 243);
-    g.initDisplay();
 
     g.draw();
 
@@ -15,7 +14,7 @@ int main()
         try
         {
             g.draw();
-        } catch (const char* &s)
+        } catch (const char* s)
         { 
             printf(s);
             exit(1);

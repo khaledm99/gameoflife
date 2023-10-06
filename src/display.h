@@ -11,6 +11,9 @@ class Display
         SDL_Rect win;
         SDL_Rect view;
     public:
+        Display(int windowWidth, int windowHeight, int gridWidth, int gridHeight);
+        ~Display();
+
         SDL_Event* getEvent();
         SDL_Window* getWindow();
         void setWindow(SDL_Window* win);

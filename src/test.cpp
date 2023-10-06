@@ -69,7 +69,7 @@ TEST(SpeedTest, DecreaseSpeed)
 TEST(SetViewTest, InvalidSettings)
 {
    //GameOfLife g(1,1);
-   Display d;
+   Display d = Display(1,1,1,1);
    SDL_Rect initialview = *d.getView();
    EXPECT_ANY_THROW(d.setView(0,0,10,10));
    EXPECT_ANY_THROW(d.setView(0,1,10,10));
@@ -85,7 +85,7 @@ TEST(SetViewTest, InvalidSettings)
 
 TEST(SetViewTest, ValidSettings)
 {
-    Display d;
+    Display d = Display(1,1,1,1);
     d.setView(1920,720,0,0);
     EXPECT_EQ(d.getView()->x, 0);
     EXPECT_EQ(d.getView()->y, 0);
@@ -95,7 +95,7 @@ TEST(SetViewTest, ValidSettings)
 
 TEST(SetWinTest, InvalidSettings)
 {
-   Display d;
+   Display d = Display(1,1,1,1);
    SDL_Rect initialview = *d.getWin();
    EXPECT_ANY_THROW(d.setWin(0,0,10,10));
    EXPECT_ANY_THROW(d.setWin(0,1,10,10));
@@ -111,7 +111,7 @@ TEST(SetWinTest, InvalidSettings)
 
 TEST(SetWinTest, ValidSettings)
 {
-    Display d;
+    Display d = Display(1,1,1,1);
     d.setWin(1920,720,0,0);
     EXPECT_EQ(d.getWin()->x, 0);
     EXPECT_EQ(d.getWin()->y, 0);
@@ -138,5 +138,24 @@ TEST(NextFrameTest, LineOscillator)
         for(auto &c : r) printf("%d",c);
     }
 }
+
+TEST(DisplayConstructorTest, InvalidParams)
+{
+    EXPECT_ANY_THROW(new Display(0,0,0,0));
+    EXPECT_ANY_THROW(new Display(-1,-1,-1,-1));
+}
+
+TEST(DisplayConstructorTest, ValidParams)
+{
+    Display d(10,20,30,40);
+    EXPECT_EQ(d.getWin()->w, 10);
+    EXPECT_EQ(d.getWin()->h,20);
+    EXPECT_EQ(d.getView()->w, 30);
+    EXPECT_EQ(d.getView()->h, 40);
+    EXPECT_NE(d.getWindow(), nullptr);
+    EXPECT_NE(d.getRenderer(), nullptr);
+    EXPECT_NE(d.getTexture(), nullptr);
+} 
+
 
 
