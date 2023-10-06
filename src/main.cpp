@@ -12,7 +12,14 @@ int main()
     while(true)
     {
         g.next();
-        g.draw();
+        try
+        {
+            g.draw();
+        } catch (const char* &s)
+        { 
+            printf(s);
+            exit(1);
+        }
         g.getInput();
         SDL_Delay(g.getSpeed());
     }

@@ -45,16 +45,30 @@ GameOfLife::~GameOfLife()
 
 int GameOfLife::initDisplay()
 {
-    SDL_Init(SDL_INIT_VIDEO);
+
+    if(SDL_Init(SDL_INIT_VIDEO)!=0)
+    {
+        throw(SDL_GetError());
+    }
 
     window = SDL_CreateWindow("GameOfLife",SDL_WINDOWPOS_UNDEFINED,SDL_WINDOWPOS_UNDEFINED,wwidth,wheight,0);
     renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_TARGETTEXTURE);
+
+    if(!(window && renderer))
+    {
+        throw(SDL_GetError());
+    }
 
     // No anti-aliasing
     SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, 0);
     
     // Texture is a pixel grid with the world dimensions, scales up to the window size
     texture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_TARGET, width, height);
+    if(!texture)
+    {
+        throw(SDL_GetError());
+    }
+
 
     setWin(wwidth, wheight, 0, 0);
     setView(width, height, 0, 0);
@@ -100,35 +114,43 @@ void GameOfLife::setWin(int w, int h, int x, int y)
 // Default black background
 int GameOfLife::clear()
 {
-    SDL_SetRenderTarget(renderer, texture);
-    SDL_SetRenderDrawColor(renderer,0,0,0,255);
-    SDL_RenderClear(renderer);
-    SDL_SetRenderTarget(renderer, NULL);
+    int checkError = 0;
+    checkError += SDL_SetRenderTarget(renderer, texture);
+    checkError += SDL_SetRenderDrawColor(renderer,0,0,0,255);
+    checkError += SDL_RenderClear(renderer);
+    checkError += SDL_SetRenderTarget(renderer, NULL);
 
-    SDL_RenderCopy(renderer,texture,&view,&win);
+    checkError += SDL_RenderCopy(renderer,texture,&view,&win);
+    if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
 
 // Draw current teration
 int GameOfLife::draw()
 {
-    clear();
+    int checkError = 0;
+    try
+    {
+        clear();
+    } catch (const char* &s){
+        throw(s);
+    }
 
-    SDL_SetRenderTarget(renderer, texture);
-    SDL_SetRenderDrawColor(renderer,255,255,255,255);   // White foreground
+    checkError+=SDL_SetRenderTarget(renderer, texture);
+    checkError+=SDL_SetRenderDrawColor(renderer,255,255,255,255);   // White foreground
 
     // Draw the world. If world cell is 0, draw nothing, if 1, draw a white pixel
     for(int i=0; i<height; i++)
     {
         for(int j=0; j<width; j++)
         {
-            if(world[i][j]==1) SDL_RenderDrawPoint(renderer,j,i);
+            if(world[i][j]==1) checkError+=SDL_RenderDrawPoint(renderer,j,i);
         }
     }
 
     // Green point at center of screen
-    SDL_SetRenderDrawColor(renderer,0,255,0,255);
-    SDL_RenderDrawPoint(renderer,width/2,height/2);
+    checkError+=SDL_SetRenderDrawColor(renderer,0,255,0,255);
+    checkError+=SDL_RenderDrawPoint(renderer,width/2,height/2);
 
     // When paused, draw a grey cell wherever the mouse pointer is located
     if(paused)
@@ -137,18 +159,22 @@ int GameOfLife::draw()
     }
     
     // Draw newly computed texture to window
-    SDL_SetRenderTarget(renderer, NULL);
-    SDL_RenderCopy(renderer,texture,&view,&win);
+    checkError+=SDL_SetRenderTarget(renderer, NULL);
+    checkError+=SDL_RenderCopy(renderer,texture,&view,&win);
     SDL_RenderPresent(renderer);
+    
+    if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
 
 int GameOfLife::drawCursor()
 {
+    int checkError = 0;
     int x, y;
     SDL_GetMouseState(&x,&y);
-    SDL_SetRenderDrawColor(renderer,200,200,200,255);
-    SDL_RenderDrawPoint(renderer, (find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
+    checkError+=SDL_SetRenderDrawColor(renderer,200,200,200,255);
+    checkError+=SDL_RenderDrawPoint(renderer, (find_nearest(x,find_nearest(win.w,view.w)))+view.x,(find_nearest(y,find_nearest(win.h,view.h)))+view.y);
+    if(checkError!=0) throw(SDL_GetError());
     return 0;
 }
 
